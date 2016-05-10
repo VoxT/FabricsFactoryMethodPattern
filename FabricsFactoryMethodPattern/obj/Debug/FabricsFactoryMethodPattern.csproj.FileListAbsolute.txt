@@ -1,0 +1,14 @@
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\FabricsFactoryMethodPattern.dll
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\FabricsFactoryMethodPattern.pdb
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Bson.dll
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.dll
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.Core.dll
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Bson.pdb
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Bson.xml
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.pdb
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.xml
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.Core.pdb
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.Core.xml
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\obj\Debug\FabricsFactoryMethodPattern.csprojResolveAssemblyReference.cache
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\obj\Debug\FabricsFactoryMethodPattern.dll
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\obj\Debug\FabricsFactoryMethodPattern.pdb
