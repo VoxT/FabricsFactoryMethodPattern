@@ -9,6 +9,5 @@ F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\
 F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.xml
 F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.Core.pdb
 F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.Core.xml
-F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\obj\Debug\FabricsFactoryMethodPattern.csprojResolveAssemblyReference.cache
 F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\obj\Debug\FabricsFactoryMethodPattern.dll
 F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\obj\Debug\FabricsFactoryMethodPattern.pdb
