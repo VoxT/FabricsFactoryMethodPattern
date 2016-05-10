@@ -39,12 +39,28 @@ namespace FabricsFactoryMethodPattern
         private Customer customer;
         public override Invoice createInvoice()
         {
+            customer = new Customer();
             return new SellerInvoice();
         }
 
         public void createCustomer(BsonDocument document)
         {
             customer.createCustomer(document);
+        }
+
+        public List<BsonDocument> getAllCustomer()
+        {
+            return customer.getAllCustomer();
+        }
+
+        public BsonDocument getACustomer(ObjectId idCustomer)
+        {
+            return customer.getACustomer(idCustomer);
+        }
+
+        public Boolean deleteACustomer(ObjectId idCustomer)
+        {
+            return customer.deleteACustomer(idCustomer);
         }
     }
 }

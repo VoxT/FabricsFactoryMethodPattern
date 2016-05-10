@@ -21,5 +21,20 @@ namespace FabricsFactoryMethodPattern
         {
             customerCollection.createCustomer(document);
         }
+
+        public List<BsonDocument> getAllCustomer()
+        {
+            return customerCollection.selectAllDocument();
+        }
+
+        public BsonDocument getACustomer(ObjectId idCustomer)
+        {
+            return customerCollection.selectADocument(idCustomer);
+        }
+
+        public Boolean deleteACustomer(ObjectId idCustomer)
+        {
+            return customerCollection.deleteADocument(idCustomer);
+        }
     }
 }
