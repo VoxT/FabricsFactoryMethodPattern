@@ -8,13 +8,13 @@ using MongoDB.Bson;
 
 namespace FabricsFactoryMethodPattern
 {
-    class SupplierGoodsReturn
+    public class SupplierGoodsReturn
     {
-        private SupplierGoodsReturn supplierGoodsReturnCollection;
+        private SupplierGoodsReturnCollection supplierGoodsReturnCollection;
 
         public SupplierGoodsReturn()
         {
-            supplierGoodsReturnCollection = new SupplierGoodsReturn();
+            supplierGoodsReturnCollection = new SupplierGoodsReturnCollection();
         }
 
         public void createSupplierGoodsReturn(BsonDocument document)

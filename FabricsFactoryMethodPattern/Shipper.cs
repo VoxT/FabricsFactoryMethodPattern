@@ -8,7 +8,7 @@ using MongoDB.Bson;
 
 namespace FabricsFactoryMethodPattern
 {
-    class Shipper
+    public class Shipper
     {
         private ShipperCollection shipperCollection;
 

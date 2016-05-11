@@ -22,3 +22,4 @@ F:\Học tập\HK8\TTTN\TTTN\FabricsFactoryMethodPattern\FabricsFactoryMethodPat
 F:\Học tập\HK8\TTTN\TTTN\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\obj\Debug\FabricsFactoryMethodPattern.csprojResolveAssemblyReference.cache
 F:\Học tập\HK8\TTTN\TTTN\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\obj\Debug\FabricsFactoryMethodPattern.dll
 F:\Học tập\HK8\TTTN\TTTN\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\obj\Debug\FabricsFactoryMethodPattern.pdb
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\obj\Debug\FabricsFactoryMethodPattern.csprojResolveAssemblyReference.cache

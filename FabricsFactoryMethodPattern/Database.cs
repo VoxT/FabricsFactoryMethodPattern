@@ -294,4 +294,19 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
+    public class ExampleCollection : Database
+    {
+        IMongoCollection<Example> collections;
+
+        public ExampleCollection()
+        {
+            collections = database.GetCollection<Example>("example");
+        }
+
+        public void createDocument(Example document)
+        {
+            collections.InsertOne(document);
+        }
+    }
+
 }
