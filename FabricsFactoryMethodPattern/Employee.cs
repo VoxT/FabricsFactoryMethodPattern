@@ -28,10 +28,20 @@ namespace FabricsFactoryMethodPattern
 
     public class Importer : Employee
     {
+        private Supplier supplier;
+
         public override Invoice createInvoice()
         {
             return new ImportInvoice();
         }
+
+        public Supplier getSupplierService()
+        {
+            supplier = new Supplier();
+
+            return supplier;
+        }
+
     }
 
     public class Seller : Employee

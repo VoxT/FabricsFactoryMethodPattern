@@ -166,11 +166,11 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    public class SupllierPriceCollection : Database
+    public class SupplierPriceCollection : Database
     {
-        public SupllierPriceCollection()
+        public SupplierPriceCollection()
         {
-            collection = database.GetCollection<BsonDocument>("supllierprice");
+            collection = database.GetCollection<BsonDocument>("supplierprice");
         }
     }
 
