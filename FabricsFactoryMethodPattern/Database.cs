@@ -13,6 +13,7 @@ namespace FabricsFactoryMethodPattern
     {
         protected MongoClient connect;
         protected IMongoDatabase database;
+        protected IMongoCollection<BsonDocument> collection;
 
         public Database()
         {
@@ -20,23 +21,12 @@ namespace FabricsFactoryMethodPattern
             database = connect.GetDatabase("fabrics");
         }
 
-    }
-
-    public class CustomerCollection : Database
-    {
-        private IMongoCollection<BsonDocument> collection;
-
-        public CustomerCollection()
-        {
-            collection = database.GetCollection<BsonDocument>("customer");
-        }
-
-        public void createCustomer(BsonDocument document)
+        public void createDocument(BsonDocument document)
         {
             collection.InsertOne(document);
         }
 
-        public List<BsonDocument> selectAllCustomer()
+        public List<BsonDocument> selectAllDocument()
         {
             var filter = new BsonDocument();
             var document = collection.Find(filter).ToList();
@@ -44,7 +34,7 @@ namespace FabricsFactoryMethodPattern
             return document;
         }
 
-        public BsonDocument selectACustomer(ObjectId idCustomer)
+        public BsonDocument selectADocument(ObjectId idCustomer)
         {
             var filter = Builders<BsonDocument>.Filter.Eq("_id", idCustomer);
             var document = collection.Find(filter).FirstOrDefault();
@@ -53,14 +43,14 @@ namespace FabricsFactoryMethodPattern
         }
 
 
-        public Boolean deleteACustomer(ObjectId idCustomer)
+        public Boolean deleteADocument(ObjectId idCustomer)
         {
             var filter = Builders<BsonDocument>.Filter.Eq("_id", idCustomer);
             var document = collection.DeleteOne(filter);
 
             return true;
         }
-        public void UpdateACustomer(ObjectId idCustomer, BsonDocument document)
+        public void UpdateADocument(ObjectId idCustomer, BsonDocument document)
         {
             var filter = Builders<BsonDocument>.Filter.Eq("_id", idCustomer);
             foreach (var result in document)
@@ -69,6 +59,29 @@ namespace FabricsFactoryMethodPattern
                 collection.UpdateOne(filter, update);
             }
         }
+
     }
 
+    public class CustomerCollection : Database
+    {
+        public CustomerCollection()
+        {
+            collection = database.GetCollection<BsonDocument>("customer");
+        }
+    }
+    public class SupplierCollection : Database
+    {
+        public SupplierCollection()
+        {
+            collection = database.GetCollection<BsonDocument>("supplier");
+        }
+    }
+
+    public class EmloyeeCollection : Database
+    {
+        public EmloyeeCollection()
+        {
+            collection = database.GetCollection<BsonDocument>("emloyee");
+        }
+    }
 }
