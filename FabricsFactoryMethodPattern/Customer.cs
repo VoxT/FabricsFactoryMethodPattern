@@ -8,7 +8,7 @@ using MongoDB.Bson;
 
 namespace FabricsFactoryMethodPattern
 {
-    class Customer
+    public class Customer
     {
         private CustomerCollection customerCollection;
 
@@ -24,18 +24,19 @@ namespace FabricsFactoryMethodPattern
 
         public List<BsonDocument> getAllCustomer()
         {
-            return customerCollection.selectAllDocument();
+            return customerCollection.selectAllCustomer();
         }
 
         public BsonDocument getACustomer(ObjectId idCustomer)
         {
-            return customerCollection.selectADocument(idCustomer);
+            return customerCollection.selectACustomer(idCustomer);
         }
 
         public Boolean deleteACustomer(ObjectId idCustomer)
         {
-            return customerCollection.deleteADocument(idCustomer);
+            return customerCollection.deleteACustomer(idCustomer);
         }
+
         public void UpdateAcustomer(ObjectId idCustomer, BsonDocument document)
         {
             customerCollection.UpdateACustomer(idCustomer, document);

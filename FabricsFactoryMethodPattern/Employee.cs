@@ -37,34 +37,17 @@ namespace FabricsFactoryMethodPattern
     public class Seller : Employee
     {
         private Customer customer;
+
         public override Invoice createInvoice()
         {
-            customer = new Customer();
             return new SellerInvoice();
         }
 
-        public void createCustomer(BsonDocument document)
+        public Customer getCustomerService()
         {
-            customer.createCustomer(document);
-        }
+            customer = new Customer();
 
-        public List<BsonDocument> getAllCustomer()
-        {
-            return customer.getAllCustomer();
-        }
-
-        public BsonDocument getACustomer(ObjectId idCustomer)
-        {
-            return customer.getACustomer(idCustomer);
-        }
-
-        public Boolean deleteACustomer(ObjectId idCustomer)
-        {
-            return customer.deleteACustomer(idCustomer);
-        }
-        public void UpdateACustomer(ObjectId idCustomer, BsonDocument document)
-        {
-            customer.UpdateAcustomer(idCustomer, document);
+            return customer;
         }
     }
 }

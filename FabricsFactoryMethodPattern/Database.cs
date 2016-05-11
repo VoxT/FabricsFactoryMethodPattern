@@ -36,7 +36,7 @@ namespace FabricsFactoryMethodPattern
             collection.InsertOne(document);
         }
 
-        public List<BsonDocument> selectAllDocument()
+        public List<BsonDocument> selectAllCustomer()
         {
             var filter = new BsonDocument();
             var document = collection.Find(filter).ToList();
@@ -44,7 +44,7 @@ namespace FabricsFactoryMethodPattern
             return document;
         }
 
-        public BsonDocument selectADocument(ObjectId idCustomer)
+        public BsonDocument selectACustomer(ObjectId idCustomer)
         {
             var filter = Builders<BsonDocument>.Filter.Eq("_id", idCustomer);
             var document = collection.Find(filter).FirstOrDefault();
@@ -53,7 +53,7 @@ namespace FabricsFactoryMethodPattern
         }
 
 
-        public Boolean deleteADocument(ObjectId idCustomer)
+        public Boolean deleteACustomer(ObjectId idCustomer)
         {
             var filter = Builders<BsonDocument>.Filter.Eq("_id", idCustomer);
             var document = collection.DeleteOne(filter);
