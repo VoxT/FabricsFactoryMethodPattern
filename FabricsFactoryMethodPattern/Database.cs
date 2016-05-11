@@ -60,6 +60,15 @@ namespace FabricsFactoryMethodPattern
 
             return true;
         }
+        public void UpdateACustomer(ObjectId idCustomer, BsonDocument document)
+        {
+            var filter = Builders<BsonDocument>.Filter.Eq("_id", idCustomer);
+            foreach (var result in document)
+            {
+                var update = Builders<BsonDocument>.Update.Set(result.Name, result.Value);
+                collection.UpdateOne(filter, update);
+            }
+        }
     }
 
 }

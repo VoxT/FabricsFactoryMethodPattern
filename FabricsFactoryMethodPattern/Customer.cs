@@ -14,7 +14,7 @@ namespace FabricsFactoryMethodPattern
 
         public Customer()
         {
-            customerCollection = new CustomerCollection();        
+            customerCollection = new CustomerCollection();
         }
 
         public void createCustomer(BsonDocument document)
@@ -35,6 +35,11 @@ namespace FabricsFactoryMethodPattern
         public Boolean deleteACustomer(ObjectId idCustomer)
         {
             return customerCollection.deleteADocument(idCustomer);
+        }
+        public void UpdateAcustomer(ObjectId idCustomer, BsonDocument document)
+        {
+            customerCollection.UpdateACustomer(idCustomer, document);
+
         }
     }
 }

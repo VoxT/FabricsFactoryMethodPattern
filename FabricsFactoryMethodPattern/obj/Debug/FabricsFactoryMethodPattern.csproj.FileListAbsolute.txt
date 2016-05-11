@@ -11,3 +11,14 @@ F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\
 F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.Core.xml
 F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\obj\Debug\FabricsFactoryMethodPattern.dll
 F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\obj\Debug\FabricsFactoryMethodPattern.pdb
+F:\Học tập\HK8\TTTN\TTTN\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\FabricsFactoryMethodPattern.dll
+F:\Học tập\HK8\TTTN\TTTN\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\FabricsFactoryMethodPattern.pdb
+F:\Học tập\HK8\TTTN\TTTN\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Bson.pdb
+F:\Học tập\HK8\TTTN\TTTN\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Bson.xml
+F:\Học tập\HK8\TTTN\TTTN\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.pdb
+F:\Học tập\HK8\TTTN\TTTN\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.xml
+F:\Học tập\HK8\TTTN\TTTN\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.Core.pdb
+F:\Học tập\HK8\TTTN\TTTN\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.Core.xml
+F:\Học tập\HK8\TTTN\TTTN\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\obj\Debug\FabricsFactoryMethodPattern.csprojResolveAssemblyReference.cache
+F:\Học tập\HK8\TTTN\TTTN\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\obj\Debug\FabricsFactoryMethodPattern.dll
+F:\Học tập\HK8\TTTN\TTTN\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\obj\Debug\FabricsFactoryMethodPattern.pdb

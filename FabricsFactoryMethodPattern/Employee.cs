@@ -62,5 +62,9 @@ namespace FabricsFactoryMethodPattern
         {
             return customer.deleteACustomer(idCustomer);
         }
+        public void UpdateACustomer(ObjectId idCustomer, BsonDocument document)
+        {
+            customer.UpdateAcustomer(idCustomer, document);
+        }
     }
 }
