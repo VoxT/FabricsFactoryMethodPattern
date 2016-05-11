@@ -26,10 +26,22 @@ namespace FabricsFactoryMethodPattern
         {
             Example example = new Example {
                    Id = ObjectId.GenerateNewId(),
-                   FirstName = "Bob",
-                   LastName = "Baker",
-                   Age = 36
+                   FirstName = "Bobbi",
+                   LastName = "Baker lol",
+                   Age = 32
                 };
+
+            collection.createDocument(example);
+        }
+
+        public void createExampleBson()
+        {
+            var example = new BsonDocument
+            {
+                {"FirstName" , "Vo Tien"},
+                {"LastName" , "Thieu"},
+                {"Age", 12}
+            };
 
             collection.createDocument(example);
         }

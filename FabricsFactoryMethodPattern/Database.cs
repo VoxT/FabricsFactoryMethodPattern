@@ -301,6 +301,7 @@ namespace FabricsFactoryMethodPattern
         public ExampleCollection()
         {
             collections = database.GetCollection<Example>("example");
+            collection = database.GetCollection<BsonDocument>("example");
         }
 
         public void createDocument(Example document)
