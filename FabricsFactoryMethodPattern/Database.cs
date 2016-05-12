@@ -53,7 +53,17 @@ namespace FabricsFactoryMethodPattern
         public void UpdateADocument(ObjectId idCustomer, T document)
         {
             var filter = Builders<T>.Filter.Eq("_id", idCustomer);
-            foreach (var result in document.ToBsonDocument())
+            foreach (var result in document.ToBsonDocument<T>())
+            {
+                var update = Builders<T>.Update.Set(result.Name, result.Value);
+                collection.UpdateOne(filter, update);
+            }
+        }
+
+        public void UpdateADocument(ObjectId idCustomer, BsonDocument document)
+        {
+            var filter = Builders<T>.Filter.Eq("_id", idCustomer);
+            foreach (var result in document)
             {
                 var update = Builders<T>.Update.Set(result.Name, result.Value);
                 collection.UpdateOne(filter, update);
@@ -210,7 +220,7 @@ namespace FabricsFactoryMethodPattern
     {
         public WareHouseCollection()
         {
-            collection = database.GetCollection<Store>("warehouse");
+            collection = database.GetCollection<WareHouse>("warehouse");
         }
     }
 
@@ -291,6 +301,14 @@ namespace FabricsFactoryMethodPattern
         public DeliveryCollection()
         {
             collection = database.GetCollection<Delivery>("delivery");
+        }
+    }
+
+    public class ExampleCollection : Database<Example>
+    { 
+        public ExampleCollection()
+        {
+            collection = database.GetCollection<Example>("example");
         }
     }
 

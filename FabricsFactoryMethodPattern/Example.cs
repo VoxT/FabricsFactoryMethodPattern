@@ -35,6 +35,16 @@ namespace FabricsFactoryMethodPattern
 
         }
 
+        public void updateExample(ObjectId id, Example example)
+        {
+            collection.UpdateADocument(id, example);
+        }
+
+        public void updateExample(ObjectId id, BsonDocument example)
+        {
+            collection.UpdateADocument(id, example);
+        }
+
         public String getString()
         {
             return "Success";

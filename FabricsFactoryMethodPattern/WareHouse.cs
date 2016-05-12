@@ -10,36 +10,36 @@ namespace FabricsFactoryMethodPattern
 {
     public class WareHouse
     {
-        private StoreCollection storeCollection;
+        private WareHouseCollection wareHouseCollection;
 
         public WareHouse()
         {
-            storeCollection = new StoreCollection();
+            wareHouseCollection = new WareHouseCollection();
         }
 
         public void createStore(WareHouse document)
         {
-            storeCollection.createDocument(document);
+            wareHouseCollection.createDocument(document);
         }
 
         public List<WareHouse> getAllStore()
         {
-            return storeCollection.selectAllDocument();
+            return wareHouseCollection.selectAllDocument();
         }
 
-        public WareHouse getAStore(ObjectId idStore)
+        public WareHouse getAStore(ObjectId idWareHouse)
         {
-            return storeCollection.selectADocument(idStore);
+            return wareHouseCollection.selectADocument(idWareHouse);
         }
 
-        public Boolean deleteAStore(ObjectId idStore)
+        public Boolean deleteAStore(ObjectId idWareHouse)
         {
-            return storeCollection.deleteADocument(idStore);
+            return wareHouseCollection.deleteADocument(idWareHouse);
         }
 
-        public void UpdateAStore(ObjectId idStore, WareHouse document)
+        public void UpdateAStore(ObjectId idWareHouse, WareHouse document)
         {
-            storeCollection.UpdateADocument(idStore, document);
+            wareHouseCollection.UpdateADocument(idWareHouse, document);
         }
 
     }

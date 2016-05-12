@@ -10,11 +10,11 @@ namespace FabricsFactoryMethodPattern
 {
     public class CustomerGoodsReturn
     {
-        private SupplierCollection customerGoodsReturnCollection;
+        private CustomerGoodsReturnCollection customerGoodsReturnCollection;
 
         public CustomerGoodsReturn()
         {
-            customerGoodsReturnCollection = new SupplierCollection();
+            customerGoodsReturnCollection = new CustomerGoodsReturnCollection();
         }
 
         public void createCustomerGoodsReturn(CustomerGoodsReturn document)
