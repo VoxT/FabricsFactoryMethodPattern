@@ -17,17 +17,17 @@ namespace FabricsFactoryMethodPattern
             customerCollection = new CustomerCollection();
         }
 
-        public void createCustomer(BsonDocument document)
+        public void createCustomer(Customer document)
         {
             customerCollection.createDocument(document);
         }
 
-        public List<BsonDocument> getAllCustomer()
+        public List<Customer> getAllCustomer()
         {
             return customerCollection.selectAllDocument();
         }
 
-        public BsonDocument getACustomer(ObjectId idCustomer)
+        public Customer getACustomer(ObjectId idCustomer)
         {
             return customerCollection.selectADocument(idCustomer);
         }
@@ -37,7 +37,7 @@ namespace FabricsFactoryMethodPattern
             return customerCollection.deleteADocument(idCustomer);
         }
 
-        public void UpdateAcustomer(ObjectId idCustomer, BsonDocument document)
+        public void UpdateAcustomer(ObjectId idCustomer, Customer document)
         {
             customerCollection.UpdateADocument(idCustomer, document);
 

@@ -8,26 +8,26 @@ using MongoDB.Bson;
 
 namespace FabricsFactoryMethodPattern
 {
-    public class CustomerCustomerPrice
+    public class CustomerPrice
     {
         private CustomerPriceCollection customerPriceCollection;
 
-        public CustomerCustomerPrice()
+        public CustomerPrice()
         {
             customerPriceCollection = new CustomerPriceCollection();
         }
 
-        public void createCustomerPrice(BsonDocument document)
+        public void createCustomerPrice(CustomerPrice document)
         {
             customerPriceCollection.createDocument(document);
         }
 
-        public List<BsonDocument> getAllCustomerPrice()
+        public List<CustomerPrice> getAllCustomerPrice()
         {
             return customerPriceCollection.selectAllDocument();
         }
 
-        public BsonDocument getACustomerPrice(ObjectId idCustomerPrice)
+        public CustomerPrice getACustomerPrice(ObjectId idCustomerPrice)
         {
             return customerPriceCollection.selectADocument(idCustomerPrice);
         }
@@ -37,7 +37,7 @@ namespace FabricsFactoryMethodPattern
             return customerPriceCollection.deleteADocument(idCustomerPrice);
         }
 
-        public void UpdateACustomerPrice(ObjectId idCustomerPrice, BsonDocument document)
+        public void UpdateACustomerPrice(ObjectId idCustomerPrice, CustomerPrice document)
         {
             customerPriceCollection.UpdateADocument(idCustomerPrice, document);
 

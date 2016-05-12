@@ -17,17 +17,17 @@ namespace FabricsFactoryMethodPattern
             supplierCellPhoneCollection = new SupplierCellPhoneCollection();
         }
 
-        public void createSupplierCellPhone(BsonDocument document)
+        public void createSupplierCellPhone(SupplierCellPhone document)
         {
             supplierCellPhoneCollection.createDocument(document);
         }
 
-        public List<BsonDocument> getAllSupplierCellPhone()
+        public List<SupplierCellPhone> getAllSupplierCellPhone()
         {
             return supplierCellPhoneCollection.selectAllDocument();
         }
 
-        public BsonDocument getASupplierCellPhone(ObjectId idSupplierCellPhone)
+        public SupplierCellPhone getASupplierCellPhone(ObjectId idSupplierCellPhone)
         {
             return supplierCellPhoneCollection.selectADocument(idSupplierCellPhone);
         }
@@ -37,7 +37,7 @@ namespace FabricsFactoryMethodPattern
             return supplierCellPhoneCollection.deleteADocument(idSupplierCellPhone);
         }
 
-        public void UpdateASupplierCellPhone(ObjectId idSupplierCellPhone, BsonDocument document)
+        public void UpdateASupplierCellPhone(ObjectId idSupplierCellPhone, SupplierCellPhone document)
         {
             supplierCellPhoneCollection.UpdateADocument(idSupplierCellPhone, document);
 

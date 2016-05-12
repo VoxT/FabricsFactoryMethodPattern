@@ -17,17 +17,17 @@ namespace FabricsFactoryMethodPattern
             recordCollection = new RecordCollection();
         }
 
-        public void createRecord(BsonDocument document)
+        public void createRecord(Record document)
         {
             recordCollection.createDocument(document);
         }
 
-        public List<BsonDocument> getAllRecord()
+        public List<Record> getAllRecord()
         {
             return recordCollection.selectAllDocument();
         }
 
-        public BsonDocument getARecord(ObjectId idRecord)
+        public Record getARecord(ObjectId idRecord)
         {
             return recordCollection.selectADocument(idRecord);
         }
@@ -37,7 +37,7 @@ namespace FabricsFactoryMethodPattern
             return recordCollection.deleteADocument(idRecord);
         }
 
-        public void UpdateARecord(ObjectId idRecord, BsonDocument document)
+        public void UpdateARecord(ObjectId idRecord, Record document)
         {
             recordCollection.UpdateADocument(idRecord, document);
 
