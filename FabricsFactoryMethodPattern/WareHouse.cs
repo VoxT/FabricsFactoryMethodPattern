@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             wareHouseCollection = new WareHouseCollection();
         }
 
-        public void createStore(WareHouse document)
+        public void CreateStore(WareHouse document)
         {
-            wareHouseCollection.createDocument(document);
+            wareHouseCollection.CreateDocument(document);
         }
 
-        public List<WareHouse> getAllStore()
+        public List<WareHouse> GetAllStore()
         {
-            return wareHouseCollection.selectAllDocument();
+            return wareHouseCollection.SelectAllDocument();
         }
 
-        public WareHouse getAStore(ObjectId idWareHouse)
+        public WareHouse GetAStore(ObjectId idWareHouse)
         {
-            return wareHouseCollection.selectADocument(idWareHouse);
+            return wareHouseCollection.SelectADocument(idWareHouse);
         }
 
-        public Boolean deleteAStore(ObjectId idWareHouse)
+        public Boolean DeleteAStore(ObjectId idWareHouse)
         {
-            return wareHouseCollection.deleteADocument(idWareHouse);
+            return wareHouseCollection.DeleteADocument(idWareHouse);
         }
 
         public void UpdateAStore(ObjectId idWareHouse, WareHouse document)

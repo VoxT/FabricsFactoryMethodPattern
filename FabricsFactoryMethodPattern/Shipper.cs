@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             shipperCollection = new ShipperCollection();
         }
 
-        public void createShipper(Shipper document)
+        public void CreateShipper(Shipper document)
         {
-            shipperCollection.createDocument(document);
+            shipperCollection.CreateDocument(document);
         }
 
-        public List<Shipper> getAllShipper()
+        public List<Shipper> GetAllShipper()
         {
-            return shipperCollection.selectAllDocument();
+            return shipperCollection.SelectAllDocument();
         }
 
-        public Shipper getAShipper(ObjectId idShipper)
+        public Shipper GetAShipper(ObjectId idShipper)
         {
-            return shipperCollection.selectADocument(idShipper);
+            return shipperCollection.SelectADocument(idShipper);
         }
 
-        public Boolean deleteAShipper(ObjectId idShipper)
+        public Boolean DeleteAShipper(ObjectId idShipper)
         {
-            return shipperCollection.deleteADocument(idShipper);
+            return shipperCollection.DeleteADocument(idShipper);
         }
 
         public void UpdateAShipper(ObjectId idShipper, Shipper document)

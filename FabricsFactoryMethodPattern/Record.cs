@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             recordCollection = new RecordCollection();
         }
 
-        public void createRecord(Record document)
+        public void CreateRecord(Record document)
         {
-            recordCollection.createDocument(document);
+            recordCollection.CreateDocument(document);
         }
 
-        public List<Record> getAllRecord()
+        public List<Record> GetAllRecord()
         {
-            return recordCollection.selectAllDocument();
+            return recordCollection.SelectAllDocument();
         }
 
-        public Record getARecord(ObjectId idRecord)
+        public Record GetARecord(ObjectId idRecord)
         {
-            return recordCollection.selectADocument(idRecord);
+            return recordCollection.SelectADocument(idRecord);
         }
 
-        public Boolean deleteARecord(ObjectId idRecord)
+        public Boolean DeleteARecord(ObjectId idRecord)
         {
-            return recordCollection.deleteADocument(idRecord);
+            return recordCollection.DeleteADocument(idRecord);
         }
 
         public void UpdateARecord(ObjectId idRecord, Record document)

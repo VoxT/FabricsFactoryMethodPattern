@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             purchaseOrderCollection = new PurchaseOrderCollection();
         }
 
-        public void createPurchaseOrder(PurchaseOrder document)
+        public void CreatePurchaseOrder(PurchaseOrder document)
         {
-            purchaseOrderCollection.createDocument(document);
+            purchaseOrderCollection.CreateDocument(document);
         }
 
-        public List<PurchaseOrder> getAllPurchaseOrder()
+        public List<PurchaseOrder> GetAllPurchaseOrder()
         {
-            return purchaseOrderCollection.selectAllDocument();
+            return purchaseOrderCollection.SelectAllDocument();
         }
 
-        public PurchaseOrder getAPurchaseOrder(ObjectId idPurchaseOrder)
+        public PurchaseOrder GetAPurchaseOrder(ObjectId idPurchaseOrder)
         {
-            return purchaseOrderCollection.selectADocument(idPurchaseOrder);
+            return purchaseOrderCollection.SelectADocument(idPurchaseOrder);
         }
 
-        public Boolean deleteAPurchaseOrder(ObjectId idPurchaseOrder)
+        public Boolean DeleteAPurchaseOrder(ObjectId idPurchaseOrder)
         {
-            return purchaseOrderCollection.deleteADocument(idPurchaseOrder);
+            return purchaseOrderCollection.DeleteADocument(idPurchaseOrder);
         }
 
         public void UpdateAPurchaseOrder(ObjectId idPurchaseOrder, PurchaseOrder document)

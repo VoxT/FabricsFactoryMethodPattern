@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             salesOrderCollection = new SalesOrderCollection();
         }
 
-        public void createSalesOrder(SalesOrder document)
+        public void CreateSalesOrder(SalesOrder document)
         {
-            salesOrderCollection.createDocument(document);
+            salesOrderCollection.CreateDocument(document);
         }
 
-        public List<SalesOrder> getAllSalesOrder()
+        public List<SalesOrder> GetAllSalesOrder()
         {
-            return salesOrderCollection.selectAllDocument();
+            return salesOrderCollection.SelectAllDocument();
         }
 
-        public SalesOrder getASalesOrder(ObjectId idSalesOrder)
+        public SalesOrder GetASalesOrder(ObjectId idSalesOrder)
         {
-            return salesOrderCollection.selectADocument(idSalesOrder);
+            return salesOrderCollection.SelectADocument(idSalesOrder);
         }
 
-        public Boolean deleteASalesOrder(ObjectId idSalesOrder)
+        public Boolean DeleteASalesOrder(ObjectId idSalesOrder)
         {
-            return salesOrderCollection.deleteADocument(idSalesOrder);
+            return salesOrderCollection.DeleteADocument(idSalesOrder);
         }
 
         public void UpdateASalesOrder(ObjectId idSalesOrder, SalesOrder document)
