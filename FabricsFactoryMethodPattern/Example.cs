@@ -10,10 +10,10 @@ namespace FabricsFactoryMethodPattern
 {
     public class Example
     {
-        public ObjectId Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public int Age { get; set; }
+        public ObjectId Id { Get; set; }
+        public string FirstName { Get; set; }
+        public string LastName { Get; set; }
+        public int Age { Get; set; }
 
         private ExampleCollection collection;
 
@@ -22,30 +22,30 @@ namespace FabricsFactoryMethodPattern
             collection = new ExampleCollection();
         }
 
-        public void createExample(Example example)
+        public void CreateExample(Example example)
         {
 
-            collection.createDocument(example);
+            collection.CreateDocument(example);
         }
 
-        public List<Example> getExample()
+        public List<Example> GetExample()
         {
             
-            return collection.selectAllDocument();
+            return collection.SelectAllDocument();
 
         }
 
-        public void updateExample(ObjectId id, Example example)
+        public void UpdateExample(ObjectId id, Example example)
         {
             collection.UpdateADocument(id, example);
         }
 
-        public void updateExample(ObjectId id, BsonDocument example)
+        public void UpdateExample(ObjectId id, BsonDocument example)
         {
             collection.UpdateADocument(id, example);
         }
 
-        public String getString()
+        public String GetString()
         {
             return "Success";
         }

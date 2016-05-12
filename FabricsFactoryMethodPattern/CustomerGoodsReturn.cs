@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             customerGoodsReturnCollection = new CustomerGoodsReturnCollection();
         }
 
-        public void createCustomerGoodsReturn(CustomerGoodsReturn document)
+        public void CreateCustomerGoodsReturn(CustomerGoodsReturn document)
         {
-            customerGoodsReturnCollection.createDocument(document);
+            customerGoodsReturnCollection.CreateDocument(document);
         }
 
-        public List<CustomerGoodsReturn> getAllCustomerGoodsReturn()
+        public List<CustomerGoodsReturn> GetAllCustomerGoodsReturn()
         {
-            return customerGoodsReturnCollection.selectAllDocument();
+            return customerGoodsReturnCollection.SelectAllDocument();
         }
 
-        public CustomerGoodsReturn getACustomerGoodsReturn(ObjectId idCustomerGoodsReturn)
+        public CustomerGoodsReturn GetACustomerGoodsReturn(ObjectId idCustomerGoodsReturn)
         {
-            return customerGoodsReturnCollection.selectADocument(idCustomerGoodsReturn);
+            return customerGoodsReturnCollection.SelectADocument(idCustomerGoodsReturn);
         }
 
-        public Boolean deleteACustomerGoodsReturn(ObjectId idCustomerGoodsReturn)
+        public Boolean DeleteACustomerGoodsReturn(ObjectId idCustomerGoodsReturn)
         {
-            return customerGoodsReturnCollection.deleteADocument(idCustomerGoodsReturn);
+            return customerGoodsReturnCollection.DeleteADocument(idCustomerGoodsReturn);
         }
 
         public void UpdateACustomerGoodsReturn(ObjectId idCustomerGoodsReturn, CustomerGoodsReturn document)

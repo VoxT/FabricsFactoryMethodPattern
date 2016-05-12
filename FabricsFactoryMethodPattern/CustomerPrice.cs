@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             customerPriceCollection = new CustomerPriceCollection();
         }
 
-        public void createCustomerPrice(CustomerPrice document)
+        public void CreateCustomerPrice(CustomerPrice document)
         {
-            customerPriceCollection.createDocument(document);
+            customerPriceCollection.CreateDocument(document);
         }
 
-        public List<CustomerPrice> getAllCustomerPrice()
+        public List<CustomerPrice> GetAllCustomerPrice()
         {
-            return customerPriceCollection.selectAllDocument();
+            return customerPriceCollection.SelectAllDocument();
         }
 
-        public CustomerPrice getACustomerPrice(ObjectId idCustomerPrice)
+        public CustomerPrice GetACustomerPrice(ObjectId idCustomerPrice)
         {
-            return customerPriceCollection.selectADocument(idCustomerPrice);
+            return customerPriceCollection.SelectADocument(idCustomerPrice);
         }
 
-        public Boolean deleteACustomerPrice(ObjectId idCustomerPrice)
+        public Boolean DeleteACustomerPrice(ObjectId idCustomerPrice)
         {
-            return customerPriceCollection.deleteADocument(idCustomerPrice);
+            return customerPriceCollection.DeleteADocument(idCustomerPrice);
         }
 
         public void UpdateACustomerPrice(ObjectId idCustomerPrice, CustomerPrice document)

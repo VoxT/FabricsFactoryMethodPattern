@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             customerCollection = new CustomerCollection();
         }
 
-        public void createCustomer(Customer document)
+        public void CreateCustomer(Customer document)
         {
-            customerCollection.createDocument(document);
+            customerCollection.CreateDocument(document);
         }
 
-        public List<Customer> getAllCustomer()
+        public List<Customer> GetAllCustomer()
         {
-            return customerCollection.selectAllDocument();
+            return customerCollection.SelectAllDocument();
         }
 
-        public Customer getACustomer(ObjectId idCustomer)
+        public Customer GetACustomer(ObjectId idCustomer)
         {
-            return customerCollection.selectADocument(idCustomer);
+            return customerCollection.SelectADocument(idCustomer);
         }
 
-        public Boolean deleteACustomer(ObjectId idCustomer)
+        public Boolean DeleteACustomer(ObjectId idCustomer)
         {
-            return customerCollection.deleteADocument(idCustomer);
+            return customerCollection.DeleteADocument(idCustomer);
         }
 
         public void UpdateAcustomer(ObjectId idCustomer, Customer document)

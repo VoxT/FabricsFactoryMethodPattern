@@ -12,14 +12,14 @@ namespace FabricsFactoryMethodPattern
     {
         public Employee()
         {
-            invoice = createInvoice();
+            invoice = CreateInvoice();
         }
 
-        public Invoice invoice { get; set; }
+        public Invoice invoice { Get; set; }
 
-        public abstract Invoice createInvoice();
+        public abstract Invoice CreateInvoice();
 
-        public void displayWhoCreateInvoice()
+        public void DisplayWhoCreateInvoice()
         {
             Console.WriteLine(invoice.GetType().ToString());
         }
@@ -30,12 +30,12 @@ namespace FabricsFactoryMethodPattern
     {
         private Supplier supplier;
 
-        public override Invoice createInvoice()
+        public override Invoice CreateInvoice()
         {
             return new ImportInvoice();
         }
 
-        public Supplier getSupplierService()
+        public Supplier GetSupplierService()
         {
             supplier = new Supplier();
 
@@ -48,12 +48,12 @@ namespace FabricsFactoryMethodPattern
     {
         private Customer customer;
 
-        public override Invoice createInvoice()
+        public override Invoice CreateInvoice()
         {
             return new SellerInvoice();
         }
 
-        public Customer getCustomerService()
+        public Customer GetCustomerService()
         {
             customer = new Customer();
 

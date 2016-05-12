@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             fabricsCollection = new FabricsCollection();
         }
 
-        public void createFabrics(Fabrics document)
+        public void CreateFabrics(Fabrics document)
         {
-            fabricsCollection.createDocument(document);
+            fabricsCollection.CreateDocument(document);
         }
 
-        public List<Fabrics> getAllFabrics()
+        public List<Fabrics> GetAllFabrics()
         {
-            return fabricsCollection.selectAllDocument();
+            return fabricsCollection.SelectAllDocument();
         }
 
-        public Fabrics getAFabrics(ObjectId idFabrics)
+        public Fabrics GetAFabrics(ObjectId idFabrics)
         {
-            return fabricsCollection.selectADocument(idFabrics);
+            return fabricsCollection.SelectADocument(idFabrics);
         }
 
-        public Boolean deleteAFabrics(ObjectId idFabrics)
+        public Boolean DeleteAFabrics(ObjectId idFabrics)
         {
-            return fabricsCollection.deleteADocument(idFabrics);
+            return fabricsCollection.DeleteADocument(idFabrics);
         }
 
         public void UpdateAFabrics(ObjectId idFabrics, Fabrics document)

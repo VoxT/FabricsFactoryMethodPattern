@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             customerBankCollection = new CustomerBankCollection();
         }
 
-        public void createCustomerBank(CustomerBank document)
+        public void CreateCustomerBank(CustomerBank document)
         {
-            customerBankCollection.createDocument(document);
+            customerBankCollection.CreateDocument(document);
         }
 
-        public List<CustomerBank> getAllCustomerBank()
+        public List<CustomerBank> GetAllCustomerBank()
         {
-            return customerBankCollection.selectAllDocument();
+            return customerBankCollection.SelectAllDocument();
         }
 
-        public CustomerBank getACustomerBank(ObjectId idCustomerBank)
+        public CustomerBank GetACustomerBank(ObjectId idCustomerBank)
         {
-            return customerBankCollection.selectADocument(idCustomerBank);
+            return customerBankCollection.SelectADocument(idCustomerBank);
         }
 
-        public Boolean deleteACustomerBank(ObjectId idCustomerBank)
+        public Boolean DeleteACustomerBank(ObjectId idCustomerBank)
         {
-            return customerBankCollection.deleteADocument(idCustomerBank);
+            return customerBankCollection.DeleteADocument(idCustomerBank);
         }
 
         public void UpdateACustomerBank(ObjectId idCustomerBank, CustomerBank document)

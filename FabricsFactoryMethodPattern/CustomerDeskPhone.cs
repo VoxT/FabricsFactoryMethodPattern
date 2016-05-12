@@ -17,30 +17,29 @@ namespace FabricsFactoryMethodPattern
             customerDeskPhoneCollection = new CustomerDeskPhoneCollection();
         }
 
-        public void createCustomerDeskPhone(CustomerDeskPhone document)
+        public void CreateCustomerDeskPhone(CustomerDeskPhone document)
         {
-            customerDeskPhoneCollection.createDocument(document);
+            customerDeskPhoneCollection.CreateDocument(document);
         }
 
-        public List<CustomerDeskPhone> getAllCustomerDeskPhone()
+        public List<CustomerDeskPhone> GetAllCustomerDeskPhone()
         {
-            return customerDeskPhoneCollection.selectAllDocument();
+            return customerDeskPhoneCollection.SelectAllDocument();
         }
 
-        public CustomerDeskPhone getACustomerDeskPhone(ObjectId idCustomerDeskPhone)
+        public CustomerDeskPhone GetACustomerDeskPhone(ObjectId idCustomerDeskPhone)
         {
-            return customerDeskPhoneCollection.selectADocument(idCustomerDeskPhone);
+            return customerDeskPhoneCollection.SelectADocument(idCustomerDeskPhone);
         }
 
-        public Boolean deleteACustomerDeskPhone(ObjectId idCustomerDeskPhone)
+        public Boolean DeleteACustomerDeskPhone(ObjectId idCustomerDeskPhone)
         {
-            return customerDeskPhoneCollection.deleteADocument(idCustomerDeskPhone);
+            return customerDeskPhoneCollection.DeleteADocument(idCustomerDeskPhone);
         }
 
         public void UpdateACustomerDeskPhone(ObjectId idCustomerDeskPhone, CustomerDeskPhone document)
         {
             customerDeskPhoneCollection.UpdateADocument(idCustomerDeskPhone, document);
-
         }
 
     }

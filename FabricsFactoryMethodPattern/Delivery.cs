@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             deliveryCollection = new DeliveryCollection();
         }
 
-        public void createDelivery(Delivery document)
+        public void CreateDelivery(Delivery document)
         {
-            deliveryCollection.createDocument(document);
+            deliveryCollection.CreateDocument(document);
         }
 
-        public List<Delivery> getAllDelivery()
+        public List<Delivery> GetAllDelivery()
         {
-            return deliveryCollection.selectAllDocument();
+            return deliveryCollection.SelectAllDocument();
         }
 
-        public Delivery getADelivery(ObjectId idDelivery)
+        public Delivery GetADelivery(ObjectId idDelivery)
         {
-            return deliveryCollection.selectADocument(idDelivery);
+            return deliveryCollection.SelectADocument(idDelivery);
         }
 
-        public Boolean deleteADelivery(ObjectId idDelivery)
+        public Boolean DeleteADelivery(ObjectId idDelivery)
         {
-            return deliveryCollection.deleteADocument(idDelivery);
+            return deliveryCollection.DeleteADocument(idDelivery);
         }
 
         public void UpdateADelivery(ObjectId idDelivery, Delivery document)
