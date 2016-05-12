@@ -15,7 +15,7 @@ namespace FabricsFactoryMethodPattern
             invoice = CreateInvoice();
         }
 
-        public Invoice invoice { Get; set; }
+        public Invoice invoice { get; set; }
 
         public abstract Invoice CreateInvoice();
 
