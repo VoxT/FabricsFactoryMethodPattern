@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             leaveCollection = new LeaveCollection();
         }
 
-        public void createLeave(Leave document)
+        public void CreateLeave(Leave document)
         {
-            leaveCollection.createDocument(document);
+            leaveCollection.CreateDocument(document);
         }
 
-        public List<Leave> getAllLeave()
+        public List<Leave> GetAllLeave()
         {
-            return leaveCollection.selectAllDocument();
+            return leaveCollection.SelectAllDocument();
         }
 
-        public Leave getALeave(ObjectId idLeave)
+        public Leave GetALeave(ObjectId idLeave)
         {
-            return leaveCollection.selectADocument(idLeave);
+            return leaveCollection.SelectADocument(idLeave);
         }
 
-        public Boolean deleteALeave(ObjectId idLeave)
+        public Boolean DeleteALeave(ObjectId idLeave)
         {
-            return leaveCollection.deleteADocument(idLeave);
+            return leaveCollection.DeleteADocument(idLeave);
         }
 
         public void UpdateALeave(ObjectId idLeave, Leave document)

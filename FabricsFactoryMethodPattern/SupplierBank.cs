@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             supplierBankCollection = new SupplierBankCollection();
         }
 
-        public void createSupplierBank(SupplierBank document)
+        public void CreateSupplierBank(SupplierBank document)
         {
-            supplierBankCollection.createDocument(document);
+            supplierBankCollection.CreateDocument(document);
         }
 
-        public List<SupplierBank> getAllSupplierBank()
+        public List<SupplierBank> GetAllSupplierBank()
         {
-            return supplierBankCollection.selectAllDocument();
+            return supplierBankCollection.SelectAllDocument();
         }
 
-        public SupplierBank getASupplierBank(ObjectId idSupplierBank)
+        public SupplierBank GetASupplierBank(ObjectId idSupplierBank)
         {
-            return supplierBankCollection.selectADocument(idSupplierBank);
+            return supplierBankCollection.SelectADocument(idSupplierBank);
         }
 
-        public Boolean deleteASupplierBank(ObjectId idSupplierBank)
+        public Boolean DeleteASupplierBank(ObjectId idSupplierBank)
         {
-            return supplierBankCollection.deleteADocument(idSupplierBank);
+            return supplierBankCollection.DeleteADocument(idSupplierBank);
         }
 
         public void UpdateASupplierBank(ObjectId idSupplierBank, SupplierBank document)

@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             paymentCollection = new PaymentCollection();
         }
 
-        public void createPayment(Payment document)
+        public void CreatePayment(Payment document)
         {
-            paymentCollection.createDocument(document);
+            paymentCollection.CreateDocument(document);
         }
 
-        public List<Payment> getAllPayment()
+        public List<Payment> GetAllPayment()
         {
-            return paymentCollection.selectAllDocument();
+            return paymentCollection.SelectAllDocument();
         }
 
-        public Payment getAPayment(ObjectId idPayment)
+        public Payment GetAPayment(ObjectId idPayment)
         {
-            return paymentCollection.selectADocument(idPayment);
+            return paymentCollection.SelectADocument(idPayment);
         }
 
-        public Boolean deleteAPayment(ObjectId idPayment)
+        public Boolean DeleteAPayment(ObjectId idPayment)
         {
-            return paymentCollection.deleteADocument(idPayment);
+            return paymentCollection.DeleteADocument(idPayment);
         }
 
         public void UpdateAPayment(ObjectId idPayment, Payment document)

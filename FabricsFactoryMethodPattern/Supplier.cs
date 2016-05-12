@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             supplierCollection = new SupplierCollection();
         }
 
-        public void createSupplier(Supplier document)
+        public void CreateSupplier(Supplier document)
         {
-            supplierCollection.createDocument(document);
+            supplierCollection.CreateDocument(document);
         }
 
-        public List<Supplier> getAllSupplier()
+        public List<Supplier> GetAllSupplier()
         {
-            return supplierCollection.selectAllDocument();
+            return supplierCollection.SelectAllDocument();
         }
 
-        public Supplier getASupplier(ObjectId idsupplier)
+        public Supplier GetASupplier(ObjectId idsupplier)
         {
-            return supplierCollection.selectADocument(idsupplier);
+            return supplierCollection.SelectADocument(idsupplier);
         }
 
-        public Boolean deleteASupplier(ObjectId idSupplier)
+        public Boolean DeleteASupplier(ObjectId idSupplier)
         {
-            return supplierCollection.deleteADocument(idSupplier);
+            return supplierCollection.DeleteADocument(idSupplier);
         }
 
         public void UpdateAsupplier(ObjectId idSupplier, Supplier document)

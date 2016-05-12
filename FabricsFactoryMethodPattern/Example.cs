@@ -10,10 +10,10 @@ namespace FabricsFactoryMethodPattern
 {
     public class Example
     {
-        public ObjectId Id { Get; set; }
-        public string FirstName { Get; set; }
-        public string LastName { Get; set; }
-        public int Age { Get; set; }
+        public ObjectId Id { get; private set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public int Age { get; set; }
 
         private ExampleCollection collection;
 
@@ -24,7 +24,6 @@ namespace FabricsFactoryMethodPattern
 
         public void CreateExample(Example example)
         {
-
             collection.CreateDocument(example);
         }
 

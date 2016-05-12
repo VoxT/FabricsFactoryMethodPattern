@@ -17,24 +17,24 @@ namespace FabricsFactoryMethodPattern
             salesInvoiceCollection = new SalesInvoiceCollection();
         }
 
-        public void createSalesInvoice(SalesInvoice document)
+        public void CreateSalesInvoice(SalesInvoice document)
         {
-            salesInvoiceCollection.createDocument(document);
+            salesInvoiceCollection.CreateDocument(document);
         }
 
-        public List<SalesInvoice> getAllSalesInvoice()
+        public List<SalesInvoice> GetAllSalesInvoice()
         {
-            return salesInvoiceCollection.selectAllDocument();
+            return salesInvoiceCollection.SelectAllDocument();
         }
 
-        public SalesInvoice getASalesInvoice(ObjectId idSalesInvoice)
+        public SalesInvoice GetASalesInvoice(ObjectId idSalesInvoice)
         {
-            return salesInvoiceCollection.selectADocument(idSalesInvoice);
+            return salesInvoiceCollection.SelectADocument(idSalesInvoice);
         }
 
-        public Boolean deleteASalesInvoice(ObjectId idSalesInvoice)
+        public Boolean DeleteASalesInvoice(ObjectId idSalesInvoice)
         {
-            return salesInvoiceCollection.deleteADocument(idSalesInvoice);
+            return salesInvoiceCollection.DeleteADocument(idSalesInvoice);
         }
 
         public void UpdateASalesInvoice(ObjectId idSalesInvoice, SalesInvoice document)
