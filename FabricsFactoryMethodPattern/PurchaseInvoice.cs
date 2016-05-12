@@ -17,17 +17,17 @@ namespace FabricsFactoryMethodPattern
             purchaseInvoiceCollection = new PurchaseInvoiceCollection();
         }
 
-        public void createPurchaseInvoice(BsonDocument document)
+        public void createPurchaseInvoice(PurchaseInvoice document)
         {
             purchaseInvoiceCollection.createDocument(document);
         }
 
-        public List<BsonDocument> getAllPurchaseInvoice()
+        public List<PurchaseInvoice> getAllPurchaseInvoice()
         {
             return purchaseInvoiceCollection.selectAllDocument();
         }
 
-        public BsonDocument getAPurchaseInvoice(ObjectId idPurchaseInvoice)
+        public PurchaseInvoice getAPurchaseInvoice(ObjectId idPurchaseInvoice)
         {
             return purchaseInvoiceCollection.selectADocument(idPurchaseInvoice);
         }
@@ -37,7 +37,7 @@ namespace FabricsFactoryMethodPattern
             return purchaseInvoiceCollection.deleteADocument(idPurchaseInvoice);
         }
 
-        public void UpdateAPurchaseInvoice(ObjectId idPurchaseInvoice, BsonDocument document)
+        public void UpdateAPurchaseInvoice(ObjectId idPurchaseInvoice, PurchaseInvoice document)
         {
             purchaseInvoiceCollection.UpdateADocument(idPurchaseInvoice, document);
 

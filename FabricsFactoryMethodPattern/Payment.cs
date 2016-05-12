@@ -17,17 +17,17 @@ namespace FabricsFactoryMethodPattern
             paymentCollection = new PaymentCollection();
         }
 
-        public void createPayment(BsonDocument document)
+        public void createPayment(Payment document)
         {
             paymentCollection.createDocument(document);
         }
 
-        public List<BsonDocument> getAllPayment()
+        public List<Payment> getAllPayment()
         {
             return paymentCollection.selectAllDocument();
         }
 
-        public BsonDocument getAPayment(ObjectId idPayment)
+        public Payment getAPayment(ObjectId idPayment)
         {
             return paymentCollection.selectADocument(idPayment);
         }
@@ -37,7 +37,7 @@ namespace FabricsFactoryMethodPattern
             return paymentCollection.deleteADocument(idPayment);
         }
 
-        public void UpdateAPayment(ObjectId idPayment, BsonDocument document)
+        public void UpdateAPayment(ObjectId idPayment, Payment document)
         {
             paymentCollection.UpdateADocument(idPayment, document);
 

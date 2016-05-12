@@ -17,17 +17,17 @@ namespace FabricsFactoryMethodPattern
             shipperCollection = new ShipperCollection();
         }
 
-        public void createShipper(BsonDocument document)
+        public void createShipper(Shipper document)
         {
             shipperCollection.createDocument(document);
         }
 
-        public List<BsonDocument> getAllShipper()
+        public List<Shipper> getAllShipper()
         {
             return shipperCollection.selectAllDocument();
         }
 
-        public BsonDocument getAShipper(ObjectId idShipper)
+        public Shipper getAShipper(ObjectId idShipper)
         {
             return shipperCollection.selectADocument(idShipper);
         }
@@ -37,7 +37,7 @@ namespace FabricsFactoryMethodPattern
             return shipperCollection.deleteADocument(idShipper);
         }
 
-        public void UpdateAShipper(ObjectId idShipper, BsonDocument document)
+        public void UpdateAShipper(ObjectId idShipper, Shipper document)
         {
             shipperCollection.UpdateADocument(idShipper, document);
 

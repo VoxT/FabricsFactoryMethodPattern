@@ -17,17 +17,17 @@ namespace FabricsFactoryMethodPattern
             fabricColorCollection = new FabricsColorCollection();
         }
 
-        public void createFabricColor(BsonDocument document)
+        public void createFabricColor(FabricsColor document)
         {
             fabricColorCollection.createDocument(document);
         }
 
-        public List<BsonDocument> getAllFabricColor()
+        public List<FabricsColor> getAllFabricColor()
         {
             return fabricColorCollection.selectAllDocument();
         }
 
-        public BsonDocument getAFabricColor(ObjectId idFabricColor)
+        public FabricsColor getAFabricColor(ObjectId idFabricColor)
         {
             return fabricColorCollection.selectADocument(idFabricColor);
         }
@@ -37,7 +37,7 @@ namespace FabricsFactoryMethodPattern
             return fabricColorCollection.deleteADocument(idFabricColor);
         }
 
-        public void UpdateAFabricColor(ObjectId idFabricColor, BsonDocument document)
+        public void UpdateAFabricColor(ObjectId idFabricColor, FabricsColor document)
         {
             fabricColorCollection.UpdateADocument(idFabricColor, document);
 

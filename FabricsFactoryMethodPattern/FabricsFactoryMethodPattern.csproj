@@ -75,7 +75,7 @@
     <Compile Include="SalesInvoice.cs" />
     <Compile Include="SalesOrder.cs" />
     <Compile Include="Shipper.cs" />
-    <Compile Include="Store.cs" />
+    <Compile Include="WareHouse.cs" />
     <Compile Include="Supplier.cs" />
     <Compile Include="SupplierBank.cs" />
     <Compile Include="SupplierCellPhone.cs" />

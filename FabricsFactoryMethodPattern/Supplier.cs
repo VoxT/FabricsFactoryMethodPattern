@@ -17,17 +17,17 @@ namespace FabricsFactoryMethodPattern
             supplierCollection = new SupplierCollection();
         }
 
-        public void createSupplier(BsonDocument document)
+        public void createSupplier(Supplier document)
         {
             supplierCollection.createDocument(document);
         }
 
-        public List<BsonDocument> getAllSupplier()
+        public List<Supplier> getAllSupplier()
         {
             return supplierCollection.selectAllDocument();
         }
 
-        public BsonDocument getASupplier(ObjectId idsupplier)
+        public Supplier getASupplier(ObjectId idsupplier)
         {
             return supplierCollection.selectADocument(idsupplier);
         }
@@ -37,7 +37,7 @@ namespace FabricsFactoryMethodPattern
             return supplierCollection.deleteADocument(idSupplier);
         }
 
-        public void UpdateAsupplier(ObjectId idSupplier, BsonDocument document)
+        public void UpdateAsupplier(ObjectId idSupplier, Supplier document)
         {
             supplierCollection.UpdateADocument(idSupplier, document);
 

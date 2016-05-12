@@ -17,17 +17,17 @@ namespace FabricsFactoryMethodPattern
             leaveCollection = new LeaveCollection();
         }
 
-        public void createLeave(BsonDocument document)
+        public void createLeave(Leave document)
         {
             leaveCollection.createDocument(document);
         }
 
-        public List<BsonDocument> getAllLeave()
+        public List<Leave> getAllLeave()
         {
             return leaveCollection.selectAllDocument();
         }
 
-        public BsonDocument getALeave(ObjectId idLeave)
+        public Leave getALeave(ObjectId idLeave)
         {
             return leaveCollection.selectADocument(idLeave);
         }
@@ -37,7 +37,7 @@ namespace FabricsFactoryMethodPattern
             return leaveCollection.deleteADocument(idLeave);
         }
 
-        public void UpdateALeave(ObjectId idLeave, BsonDocument document)
+        public void UpdateALeave(ObjectId idLeave, Leave document)
         {
             leaveCollection.UpdateADocument(idLeave, document);
 

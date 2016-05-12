@@ -17,17 +17,17 @@ namespace FabricsFactoryMethodPattern
             deliveryCollection = new DeliveryCollection();
         }
 
-        public void createDelivery(BsonDocument document)
+        public void createDelivery(Delivery document)
         {
             deliveryCollection.createDocument(document);
         }
 
-        public List<BsonDocument> getAllDelivery()
+        public List<Delivery> getAllDelivery()
         {
             return deliveryCollection.selectAllDocument();
         }
 
-        public BsonDocument getADelivery(ObjectId idDelivery)
+        public Delivery getADelivery(ObjectId idDelivery)
         {
             return deliveryCollection.selectADocument(idDelivery);
         }
@@ -37,7 +37,7 @@ namespace FabricsFactoryMethodPattern
             return deliveryCollection.deleteADocument(idDelivery);
         }
 
-        public void UpdateADelivery(ObjectId idDelivery, BsonDocument document)
+        public void UpdateADelivery(ObjectId idDelivery, Delivery document)
         {
             deliveryCollection.UpdateADocument(idDelivery, document);
         }

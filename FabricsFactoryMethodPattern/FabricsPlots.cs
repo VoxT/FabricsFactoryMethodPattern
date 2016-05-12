@@ -17,17 +17,17 @@ namespace FabricsFactoryMethodPattern
             plotsCollection = new FabricsPlotsCollection();
         }
 
-        public void createPlots(BsonDocument document)
+        public void createPlots(FabricsPlots document)
         {
             plotsCollection.createDocument(document);
         }
 
-        public List<BsonDocument> getAllPlots()
+        public List<FabricsPlots> getAllPlots()
         {
             return plotsCollection.selectAllDocument();
         }
 
-        public BsonDocument getAPlots(ObjectId idPlots)
+        public FabricsPlots getAPlots(ObjectId idPlots)
         {
             return plotsCollection.selectADocument(idPlots);
         }
@@ -37,7 +37,7 @@ namespace FabricsFactoryMethodPattern
             return plotsCollection.deleteADocument(idPlots);
         }
 
-        public void UpdateAPlots(ObjectId idPlots, BsonDocument document)
+        public void UpdateAPlots(ObjectId idPlots, FabricsPlots document)
         {
             plotsCollection.UpdateADocument(idPlots, document);
 

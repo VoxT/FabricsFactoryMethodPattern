@@ -17,17 +17,17 @@ namespace FabricsFactoryMethodPattern
             supplierGoodsReturnCollection = new SupplierGoodsReturnCollection();
         }
 
-        public void createSupplierGoodsReturn(BsonDocument document)
+        public void createSupplierGoodsReturn(SupplierGoodsReturn document)
         {
             supplierGoodsReturnCollection.createDocument(document);
         }
 
-        public List<BsonDocument> getAllSupplierGoodsReturn()
+        public List<SupplierGoodsReturn> getAllSupplierGoodsReturn()
         {
             return supplierGoodsReturnCollection.selectAllDocument();
         }
 
-        public BsonDocument getASupplierGoodsReturn(ObjectId idSupplierGoodsReturn)
+        public SupplierGoodsReturn getASupplierGoodsReturn(ObjectId idSupplierGoodsReturn)
         {
             return supplierGoodsReturnCollection.selectADocument(idSupplierGoodsReturn);
         }
@@ -37,7 +37,7 @@ namespace FabricsFactoryMethodPattern
             return supplierGoodsReturnCollection.deleteADocument(idSupplierGoodsReturn);
         }
 
-        public void UpdateASupplierGoodsReturn(ObjectId idSupplierGoodsReturn, BsonDocument document)
+        public void UpdateASupplierGoodsReturn(ObjectId idSupplierGoodsReturn, SupplierGoodsReturn document)
         {
             supplierGoodsReturnCollection.UpdateADocument(idSupplierGoodsReturn, document);
 

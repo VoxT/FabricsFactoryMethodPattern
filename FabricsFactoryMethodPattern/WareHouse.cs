@@ -8,26 +8,26 @@ using MongoDB.Bson;
 
 namespace FabricsFactoryMethodPattern
 {
-    public class Store
+    public class WareHouse
     {
         private StoreCollection storeCollection;
 
-        public Store()
+        public WareHouse()
         {
             storeCollection = new StoreCollection();
         }
 
-        public void createStore(BsonDocument document)
+        public void createStore(WareHouse document)
         {
             storeCollection.createDocument(document);
         }
 
-        public List<BsonDocument> getAllStore()
+        public List<WareHouse> getAllStore()
         {
             return storeCollection.selectAllDocument();
         }
 
-        public BsonDocument getAStore(ObjectId idStore)
+        public WareHouse getAStore(ObjectId idStore)
         {
             return storeCollection.selectADocument(idStore);
         }
@@ -37,7 +37,7 @@ namespace FabricsFactoryMethodPattern
             return storeCollection.deleteADocument(idStore);
         }
 
-        public void UpdateAStore(ObjectId idStore, BsonDocument document)
+        public void UpdateAStore(ObjectId idStore, WareHouse document)
         {
             storeCollection.UpdateADocument(idStore, document);
         }
