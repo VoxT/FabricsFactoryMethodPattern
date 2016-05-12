@@ -22,28 +22,22 @@ namespace FabricsFactoryMethodPattern
             collection = new ExampleCollection();
         }
 
-        public void createExample()
+        public void createExample(Example example)
         {
-            Example example = new Example {
-                   Id = ObjectId.GenerateNewId(),
-                   FirstName = "Bobbi",
-                   LastName = "Baker lol",
-                   Age = 32
-                };
 
             collection.createDocument(example);
         }
 
-        public void createExampleBson()
+        public List<Example> getExample()
         {
-            var example = new BsonDocument
-            {
-                {"FirstName" , "Vo Tien"},
-                {"LastName" , "Thieu"},
-                {"Age", 12}
-            };
+            
+            return collection.selectAllDocument();
 
-            collection.createDocument(example);
+        }
+
+        public String getString()
+        {
+            return "Success";
         }
     }
 }

@@ -9,11 +9,11 @@ using MongoDB.Driver.Core;
 
 namespace FabricsFactoryMethodPattern
 {
-    public abstract class Database
+    public abstract class Database<T>
     {
         protected MongoClient connect;
         protected IMongoDatabase database;
-        protected IMongoCollection<BsonDocument> collection;
+        protected IMongoCollection<T> collection;
 
         public Database()
         {
@@ -21,12 +21,12 @@ namespace FabricsFactoryMethodPattern
             database = connect.GetDatabase("fabrics");
         }
 
-        public void createDocument(BsonDocument document)
+        public void createDocument(T document)
         {
             collection.InsertOne(document);
         }
 
-        public List<BsonDocument> selectAllDocument()
+        public List<T> selectAllDocument()
         {
             var filter = new BsonDocument();
             var document = collection.Find(filter).ToList();
@@ -34,9 +34,9 @@ namespace FabricsFactoryMethodPattern
             return document;
         }
 
-        public BsonDocument selectADocument(ObjectId idCustomer)
+        public T selectADocument(ObjectId idCustomer)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", idCustomer);
+            var filter = Builders<T>.Filter.Eq("_id", idCustomer);
             var document = collection.Find(filter).FirstOrDefault();
 
             return document;
@@ -44,33 +44,33 @@ namespace FabricsFactoryMethodPattern
 
         public Boolean deleteADocument(ObjectId idCustomer)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", idCustomer);
+            var filter = Builders<T>.Filter.Eq("_id", idCustomer);
             var document = collection.DeleteOne(filter);
 
             return true;
         }
 
-        public void UpdateADocument(ObjectId idCustomer, BsonDocument document)
+        public void UpdateADocument(ObjectId idCustomer, T document)
         {
-            var filter = Builders<BsonDocument>.Filter.Eq("_id", idCustomer);
-            foreach (var result in document)
+            var filter = Builders<T>.Filter.Eq("_id", idCustomer);
+            foreach (var result in document.ToBsonDocument())
             {
-                var update = Builders<BsonDocument>.Update.Set(result.Name, result.Value);
+                var update = Builders<T>.Update.Set(result.Name, result.Value);
                 collection.UpdateOne(filter, update);
             }
         }
 
     }
 
-    public class EmloyeeCollection : Database
+    public class EmloyeeCollection : Database<Employee>
     {
         public EmloyeeCollection()
         {
-            collection = database.GetCollection<BsonDocument>("emloyee");
+            collection = database.GetCollection<Employee>("emloyee");
         }
     }
 
-    public class ShipperCollection : Database
+    public class ShipperCollection : Database<Shipper>
     {
         public ShipperCollection()
         {
@@ -291,22 +291,6 @@ namespace FabricsFactoryMethodPattern
         public DeliveryCollection()
         {
             collection = database.GetCollection<BsonDocument>("delivery");
-        }
-    }
-
-    public class ExampleCollection : Database
-    {
-        IMongoCollection<Example> collections;
-
-        public ExampleCollection()
-        {
-            collections = database.GetCollection<Example>("example");
-            collection = database.GetCollection<BsonDocument>("example");
-        }
-
-        public void createDocument(Example document)
-        {
-            collections.InsertOne(document);
         }
     }
 
