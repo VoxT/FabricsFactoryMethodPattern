@@ -74,223 +74,223 @@ namespace FabricsFactoryMethodPattern
     {
         public ShipperCollection()
         {
-            collection = database.GetCollection<BsonDocument>("shipper");
+            collection = database.GetCollection<Shipper>("shipper");
         }
     }
 
-    public class LeaveCollection : Database
+    public class LeaveCollection : Database<Leave>
     {
         public LeaveCollection()
         {
-            collection = database.GetCollection<BsonDocument>("leave");
+            collection = database.GetCollection<Leave>("leave");
         }
     }
 
-    public class FabricsCollection : Database
+    public class FabricsCollection : Database<Fabrics>
     {
         public FabricsCollection()
         {
-            collection = database.GetCollection<BsonDocument>("fabrics");
+            collection = database.GetCollection<Fabrics>("fabrics");
         }
     }
 
-    public class FabricsColorCollection : Database
+    public class FabricsColorCollection : Database<FabricsColor>
     {
         public FabricsColorCollection()
         {
-            collection = database.GetCollection<BsonDocument>("fabricscolor");
+            collection = database.GetCollection<FabricsColor>("fabricscolor");
         }
     }
 
-    public class FabricsRollCollection : Database
+    public class FabricsRollCollection : Database<FabricsRoll>
     {
         public FabricsRollCollection()
         {
-            collection = database.GetCollection<BsonDocument>("fabricsroll");
+            collection = database.GetCollection<FabricsRoll>("fabricsroll");
         }
     }
 
-    public class FabricsPlotsCollection : Database
+    public class FabricsPlotsCollection : Database<FabricsPlots>
     {
         public FabricsPlotsCollection()
         {
-            collection = database.GetCollection<BsonDocument>("fabricsplots");
+            collection = database.GetCollection<FabricsPlots>("fabricsplots");
         }
     }
 
-    public class PaymentCollection : Database
+    public class PaymentCollection : Database<Payment>
     {
         public PaymentCollection()
         {
-            collection = database.GetCollection<BsonDocument>("payment");
+            collection = database.GetCollection<Payment>("payment");
         }
     }
 
-    public class RecordCollection : Database
+    public class RecordCollection : Database<Record>
     {
         public RecordCollection()
         {
-            collection = database.GetCollection<BsonDocument>("record");
+            collection = database.GetCollection<Record>("record");
         }
     }
 
-    public class SupplierCollection : Database
+    public class SupplierCollection : Database<Supplier>
     {
         public SupplierCollection()
         {
-            collection = database.GetCollection<BsonDocument>("supplier");
+            collection = database.GetCollection<Supplier>("supplier");
         }
     }
 
-    public class SupplierCellPhoneCollection : Database
+    public class SupplierCellPhoneCollection : Database<SupplierCellPhone>
     {
         public SupplierCellPhoneCollection()
         {
-            collection = database.GetCollection<BsonDocument>("suppliercellphone");
+            collection = database.GetCollection<SupplierCellPhone>("suppliercellphone");
         }
     }
 
-    public class SupplierDeskPhoneCollection : Database
+    public class SupplierDeskPhoneCollection : Database<SupplierDeskPhone>
     {
         public SupplierDeskPhoneCollection()
         {
-            collection = database.GetCollection<BsonDocument>("supplierdeskphone");
+            collection = database.GetCollection<SupplierDeskPhone>("supplierdeskphone");
         }
     }
 
-    public class SupplierBankCollection : Database
+    public class SupplierBankCollection : Database<SupplierBank>
     {
         public SupplierBankCollection()
         {
-            collection = database.GetCollection<BsonDocument>("supplierbank");
+            collection = database.GetCollection<SupplierBank>("supplierbank");
         }
     }
 
-    public class SupplierPriceCollection : Database
+    public class SupplierPriceCollection : Database<SupplierPrice>
     {
         public SupplierPriceCollection()
         {
-            collection = database.GetCollection<BsonDocument>("supplierprice");
+            collection = database.GetCollection<SupplierPrice>("supplierprice");
         }
     }
 
-    public class PurchaseGoodsCollection : Database
+    public class PurchaseGoodsCollection : Database<PurchaseGoods>
     {
         public PurchaseGoodsCollection()
         {
-            collection = database.GetCollection<BsonDocument>("purchasegoods");
+            collection = database.GetCollection<PurchaseGoods>("purchasegoods");
         }
     }
 
-    public class SupplierGoodsReturnCollection : Database
+    public class SupplierGoodsReturnCollection : Database<SupplierGoodsReturn>
     {
         public SupplierGoodsReturnCollection()
         {
-            collection = database.GetCollection<BsonDocument>("suppliergoodsreturn");
+            collection = database.GetCollection<SupplierGoodsReturn>("suppliergoodsreturn");
         }
     }
 
-    public class PurchaseOrderCollection : Database
+    public class PurchaseOrderCollection : Database<PurchaseOrder>
     {
         public PurchaseOrderCollection()
         {
-            collection = database.GetCollection<BsonDocument>("purchaseorder");
+            collection = database.GetCollection<PurchaseOrder>("purchaseorder");
         }
     }
 
-    public class PurchaseInvoiceCollection : Database
+    public class PurchaseInvoiceCollection : Database<PurchaseInvoice>
     {
         public PurchaseInvoiceCollection()
         {
-            collection = database.GetCollection<BsonDocument>("purchaseinvoice");
+            collection = database.GetCollection<PurchaseInvoice>("purchaseinvoice");
         }
     }
 
-    public class StoreCollection : Database
+    public class WareHouseCollection : Database<WareHouse>
     {
-        public StoreCollection()
+        public WareHouseCollection()
         {
-            collection = database.GetCollection<BsonDocument>("store");
+            collection = database.GetCollection<Store>("warehouse");
         }
     }
 
-    public class CustomerCollection : Database
+    public class CustomerCollection : Database<Customer>
     {
         public CustomerCollection()
         {
-            collection = database.GetCollection<BsonDocument>("customer");
+            collection = database.GetCollection<Customer>("customer");
         }
     }
 
-    public class CustomerCellPhoneCollection : Database
+    public class CustomerCellPhoneCollection : Database<CustomerCellPhone>
     {
         public CustomerCellPhoneCollection()
         {
-            collection = database.GetCollection<BsonDocument>("customercellphone");
+            collection = database.GetCollection<CustomerCellPhone>("customercellphone");
         }
     }
 
-    public class CustomerDeskPhoneCollection : Database
+    public class CustomerDeskPhoneCollection : Database<CustomerDeskPhone>
     {
         public CustomerDeskPhoneCollection()
         {
-            collection = database.GetCollection<BsonDocument>("customerdeskphone");
+            collection = database.GetCollection<CustomerDeskPhone>("customerdeskphone");
         }
     }
 
-    public class CustomerBankCollection : Database
+    public class CustomerBankCollection : Database<CustomerBank>
     {
         public CustomerBankCollection()
         {
-            collection = database.GetCollection<BsonDocument>("customerbank");
+            collection = database.GetCollection<CustomerBank>("customerbank");
         }
     }
 
-    public class CustomerPriceCollection : Database
+    public class CustomerPriceCollection : Database<CustomerPrice>
     {
         public CustomerPriceCollection()
         {
-            collection = database.GetCollection<BsonDocument>("customerprice");
+            collection = database.GetCollection<CustomerPrice>("customerprice");
         }
     }
 
-    public class GoodsSoldCollection : Database
+    public class GoodsSoldCollection : Database<GoodsSold>
     {
         public GoodsSoldCollection()
         {
-            collection = database.GetCollection<BsonDocument>("goodssold");
+            collection = database.GetCollection<GoodsSold>("goodssold");
         }
     }
 
-    public class SalesOrderCollection : Database
+    public class SalesOrderCollection : Database<SalesOrder>
     {
         public SalesOrderCollection()
         {
-            collection = database.GetCollection<BsonDocument>("salesorder");
+            collection = database.GetCollection<SalesOrder>("salesorder");
         }
     }
 
-    public class CustomerGoodsReturnCollection : Database
+    public class CustomerGoodsReturnCollection : Database<CustomerGoodsReturn>
     {
         public CustomerGoodsReturnCollection()
         {
-            collection = database.GetCollection<BsonDocument>("customergoodsreturn");
+            collection = database.GetCollection<CustomerGoodsReturn>("customergoodsreturn");
         }
     }
 
-    public class SalesInvoiceCollection : Database
+    public class SalesInvoiceCollection : Database<SalesInvoice>
     {
         public SalesInvoiceCollection()
         {
-            collection = database.GetCollection<BsonDocument>("salesinvoice");
+            collection = database.GetCollection<SalesInvoice>("salesinvoice");
         }
     }
 
-    public class DeliveryCollection : Database
+    public class DeliveryCollection : Database<Delivery>
     {
         public DeliveryCollection()
         {
-            collection = database.GetCollection<BsonDocument>("delivery");
+            collection = database.GetCollection<Delivery>("delivery");
         }
     }
 
