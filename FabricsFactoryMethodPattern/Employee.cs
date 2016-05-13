@@ -32,7 +32,7 @@ namespace FabricsFactoryMethodPattern
 
         public override Invoice CreateInvoice()
         {
-            return new ImportInvoice();
+            return new PurchaseInvoice();
         }
 
         public Supplier GetSupplierService()
@@ -50,7 +50,7 @@ namespace FabricsFactoryMethodPattern
 
         public override Invoice CreateInvoice()
         {
-            return new SellerInvoice();
+            return new SalesInvoice();
         }
 
         public Customer GetCustomerService()

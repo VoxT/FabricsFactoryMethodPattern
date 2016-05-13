@@ -9,16 +9,25 @@ using MongoDB.Driver.Core;
 
 namespace FabricsFactoryMethodPattern
 {
-    abstract class Database<T>
+    public abstract class Database
     {
         protected static IMongoDatabase database;
-        protected IMongoCollection<T> collection;
 
         public Database()
         {
             MongoClient connection = (new Connection()).connection;
 
             database = connection.GetDatabase("fabrics");
+        }
+    }
+
+    abstract class Collection<T> : Database
+    {
+        protected IMongoCollection<T> collection;
+
+        public Collection()
+        {
+            MongoClient connection = (new Connection()).connection;
         }
 
         public void CreateDocument(T document)
@@ -72,7 +81,7 @@ namespace FabricsFactoryMethodPattern
 
     }
 
-    class EmloyeeCollection : Database<Employee>
+    class EmloyeeCollection : Collection<Employee>
     {
         public EmloyeeCollection()
         {
@@ -80,7 +89,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class ShipperCollection : Database<Shipper>
+    class ShipperCollection : Collection<Shipper>
     {
         public ShipperCollection()
         {
@@ -88,7 +97,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class LeaveCollection : Database<Leave>
+    class LeaveCollection : Collection<Leave>
     {
         public LeaveCollection()
         {
@@ -96,7 +105,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class FabricsCollection : Database<Fabrics>
+    class FabricsCollection : Collection<Fabrics>
     {
         public FabricsCollection()
         {
@@ -104,7 +113,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class FabricsColorCollection : Database<FabricsColor>
+    class FabricsColorCollection : Collection<FabricsColor>
     {
         public FabricsColorCollection()
         {
@@ -112,7 +121,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class FabricsRollCollection : Database<FabricsRoll>
+    class FabricsRollCollection : Collection<FabricsRoll>
     {
         public FabricsRollCollection()
         {
@@ -120,7 +129,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class FabricsPlotsCollection : Database<FabricsPlots>
+    class FabricsPlotsCollection : Collection<FabricsPlots>
     {
         public FabricsPlotsCollection()
         {
@@ -128,7 +137,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class PaymentCollection : Database<Payment>
+    class PaymentCollection : Collection<Payment>
     {
         public PaymentCollection()
         {
@@ -136,7 +145,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class RecordCollection : Database<Record>
+    class RecordCollection : Collection<Record>
     {
         public RecordCollection()
         {
@@ -144,7 +153,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class SupplierCollection : Database<Supplier>
+    class SupplierCollection : Collection<Supplier>
     {
         public SupplierCollection()
         {
@@ -152,7 +161,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class SupplierCellPhoneCollection : Database<SupplierCellPhone>
+    class SupplierCellPhoneCollection : Collection<SupplierCellPhone>
     {
         public SupplierCellPhoneCollection()
         {
@@ -160,7 +169,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class SupplierDeskPhoneCollection : Database<SupplierDeskPhone>
+    class SupplierDeskPhoneCollection : Collection<SupplierDeskPhone>
     {
         public SupplierDeskPhoneCollection()
         {
@@ -168,7 +177,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class SupplierBankCollection : Database<SupplierBank>
+    class SupplierBankCollection : Collection<SupplierBank>
     {
         public SupplierBankCollection()
         {
@@ -176,7 +185,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class SupplierPriceCollection : Database<SupplierPrice>
+    class SupplierPriceCollection : Collection<SupplierPrice>
     {
         public SupplierPriceCollection()
         {
@@ -184,7 +193,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class PurchaseGoodsCollection : Database<PurchaseGoods>
+    class PurchaseGoodsCollection : Collection<PurchaseGoods>
     {
         public PurchaseGoodsCollection()
         {
@@ -192,7 +201,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class SupplierGoodsReturnCollection : Database<SupplierGoodsReturn>
+    class SupplierGoodsReturnCollection : Collection<SupplierGoodsReturn>
     {
         public SupplierGoodsReturnCollection()
         {
@@ -200,7 +209,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class PurchaseOrderCollection : Database<PurchaseOrder>
+    class PurchaseOrderCollection : Collection<PurchaseOrder>
     {
         public PurchaseOrderCollection()
         {
@@ -208,7 +217,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class PurchaseInvoiceCollection : Database<PurchaseInvoice>
+    class PurchaseInvoiceCollection : Collection<PurchaseInvoice>
     {
         public PurchaseInvoiceCollection()
         {
@@ -216,7 +225,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class WareHouseCollection : Database<WareHouse>
+    class WareHouseCollection : Collection<WareHouse>
     {
         public WareHouseCollection()
         {
@@ -224,7 +233,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class CustomerCollection : Database<Customer>
+    class CustomerCollection : Collection<Customer>
     {
         public CustomerCollection()
         {
@@ -232,7 +241,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class CustomerCellPhoneCollection : Database<CustomerCellPhone>
+    class CustomerCellPhoneCollection : Collection<CustomerCellPhone>
     {
         public CustomerCellPhoneCollection()
         {
@@ -240,7 +249,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class CustomerDeskPhoneCollection : Database<CustomerDeskPhone>
+    class CustomerDeskPhoneCollection : Collection<CustomerDeskPhone>
     {
         public CustomerDeskPhoneCollection()
         {
@@ -248,7 +257,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class CustomerBankCollection : Database<CustomerBank>
+    class CustomerBankCollection : Collection<CustomerBank>
     {
         public CustomerBankCollection()
         {
@@ -256,7 +265,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class CustomerPriceCollection : Database<CustomerPrice>
+    class CustomerPriceCollection : Collection<CustomerPrice>
     {
         public CustomerPriceCollection()
         {
@@ -264,7 +273,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class GoodsSoldCollection : Database<GoodsSold>
+    class GoodsSoldCollection : Collection<GoodsSold>
     {
         public GoodsSoldCollection()
         {
@@ -272,7 +281,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class SalesOrderCollection : Database<SalesOrder>
+    class SalesOrderCollection : Collection<SalesOrder>
     {
         public SalesOrderCollection()
         {
@@ -280,7 +289,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class CustomerGoodsReturnCollection : Database<CustomerGoodsReturn>
+    class CustomerGoodsReturnCollection : Collection<CustomerGoodsReturn>
     {
         public CustomerGoodsReturnCollection()
         {
@@ -288,7 +297,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class SalesInvoiceCollection : Database<SalesInvoice>
+    class SalesInvoiceCollection : Collection<SalesInvoice>
     {
         public SalesInvoiceCollection()
         {
@@ -296,7 +305,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class DeliveryCollection : Database<Delivery>
+    class DeliveryCollection : Collection<Delivery>
     {
         public DeliveryCollection()
         {
@@ -304,7 +313,7 @@ namespace FabricsFactoryMethodPattern
         }
     }
 
-    class ExampleCollection : Database<Example>
+    class ExampleCollection : Collection<Example>
     { 
         public ExampleCollection()
         {

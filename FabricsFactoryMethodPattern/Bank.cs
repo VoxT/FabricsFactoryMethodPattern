@@ -8,7 +8,12 @@ using MongoDB.Bson;
 
 namespace FabricsFactoryMethodPattern
 {
-    public class CustomerBank
+    public abstract class Bank
+    {
+
+    }
+
+    public class CustomerBank : Bank
     {
         private CustomerBankCollection customerBankCollection;
 
@@ -40,6 +45,43 @@ namespace FabricsFactoryMethodPattern
         public void UpdateACustomerBank(ObjectId idCustomerBank, CustomerBank document)
         {
             customerBankCollection.UpdateADocument(idCustomerBank, document);
+
+        }
+
+    }
+
+    public class SupplierBank : Bank
+    {
+        private SupplierBankCollection supplierBankCollection;
+
+        public SupplierBank()
+        {
+            supplierBankCollection = new SupplierBankCollection();
+        }
+
+        public void CreateSupplierBank(SupplierBank document)
+        {
+            supplierBankCollection.CreateDocument(document);
+        }
+
+        public List<SupplierBank> GetAllSupplierBank()
+        {
+            return supplierBankCollection.SelectAllDocument();
+        }
+
+        public SupplierBank GetASupplierBank(ObjectId idSupplierBank)
+        {
+            return supplierBankCollection.SelectADocument(idSupplierBank);
+        }
+
+        public Boolean DeleteASupplierBank(ObjectId idSupplierBank)
+        {
+            return supplierBankCollection.DeleteADocument(idSupplierBank);
+        }
+
+        public void UpdateASupplierBank(ObjectId idSupplierBank, SupplierBank document)
+        {
+            supplierBankCollection.UpdateADocument(idSupplierBank, document);
 
         }
 

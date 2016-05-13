@@ -8,7 +8,47 @@ using MongoDB.Bson;
 
 namespace FabricsFactoryMethodPattern
 {
-    public class SupplierGoodsReturn
+    public abstract class GoodsReturn
+    {
+    }
+
+    public class CustomerGoodsReturn : GoodsReturn
+    {
+        private CustomerGoodsReturnCollection customerGoodsReturnCollection;
+
+        public CustomerGoodsReturn()
+        {
+            customerGoodsReturnCollection = new CustomerGoodsReturnCollection();
+        }
+
+        public void CreateCustomerGoodsReturn(CustomerGoodsReturn document)
+        {
+            customerGoodsReturnCollection.CreateDocument(document);
+        }
+
+        public List<CustomerGoodsReturn> GetAllCustomerGoodsReturn()
+        {
+            return customerGoodsReturnCollection.SelectAllDocument();
+        }
+
+        public CustomerGoodsReturn GetACustomerGoodsReturn(ObjectId idCustomerGoodsReturn)
+        {
+            return customerGoodsReturnCollection.SelectADocument(idCustomerGoodsReturn);
+        }
+
+        public Boolean DeleteACustomerGoodsReturn(ObjectId idCustomerGoodsReturn)
+        {
+            return customerGoodsReturnCollection.DeleteADocument(idCustomerGoodsReturn);
+        }
+
+        public void UpdateACustomerGoodsReturn(ObjectId idCustomerGoodsReturn, CustomerGoodsReturn document)
+        {
+            customerGoodsReturnCollection.UpdateADocument(idCustomerGoodsReturn, document);
+        }
+
+    }
+
+    public class SupplierGoodsReturn : GoodsReturn
     {
         private SupplierGoodsReturnCollection supplierGoodsReturnCollection;
 
