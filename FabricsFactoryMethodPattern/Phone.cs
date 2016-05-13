@@ -13,15 +13,19 @@ namespace FabricsFactoryMethodPattern
     }
 
     public abstract class CellPhone : Phone
-    { 
+    {
+        public string CellPhoneNumber { get; set; }
+
     }
 
     public abstract class DeskPhone : Phone
-    { 
+    {
+        public string DeskPhoneNumber { get; set; }
     }
 
     public class SupplierCellPhone : CellPhone
     {
+        public ObjectId SupplierId { get; set; }
         private SupplierCellPhoneCollection supplierCellPhoneCollection;
 
         public SupplierCellPhone()
@@ -59,6 +63,7 @@ namespace FabricsFactoryMethodPattern
 
     public class SupplierDeskPhone
     {
+        public ObjectId SupplierId { get; set; }
         private SupplierDeskPhoneCollection supplierDeskPhoneCollection;
 
         public SupplierDeskPhone()
@@ -96,6 +101,7 @@ namespace FabricsFactoryMethodPattern
 
     public class CustomerCellPhone
     {
+        public ObjectId CustomerId { get; set; }
         private CustomerCellPhoneCollection customerCellPhoneCollection;
 
         public CustomerCellPhone()
@@ -133,6 +139,7 @@ namespace FabricsFactoryMethodPattern
 
     public class CustomerDeskPhone
     {
+        public ObjectId CustomerId { get; set; }
         private CustomerDeskPhoneCollection customerDeskPhoneCollection;
 
         public CustomerDeskPhone()

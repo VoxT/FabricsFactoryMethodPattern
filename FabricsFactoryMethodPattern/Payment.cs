@@ -10,7 +10,20 @@ namespace FabricsFactoryMethodPattern
 {
     public class Payment
     {
-         private PaymentCollection paymentCollection;
+        public ObjectId Id { get; private set; }
+        public Database Time { get; set; }
+        public double Money { get; set; }
+        public string PaymentMethod { get; set; }
+        public string RecipientOrSender { get; set; }
+        public string BankName { get; set; }
+        public string AccountNumber { get; set; }
+        public string Method { get; set; }
+        public ObjectId EmployeeId { get; set; }
+        public ObjectId CustomerId { get; set; }
+        public ObjectId SupplierId { get; set; }
+
+
+        private PaymentCollection paymentCollection;
 
         public Payment()
         {
