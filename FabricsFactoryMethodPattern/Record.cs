@@ -10,7 +10,15 @@ namespace FabricsFactoryMethodPattern
 {
     public class Record
     {
-         private RecordCollection recordCollection;
+        public ObjectId Id { get; private set; }
+        public double Monney { get; set; }
+        public DateTime Time { get; set; }
+        public string Note { get; set; }
+        public ObjectId PurchaseInvoiceId {get; set; }
+        public ObjectId SalesInvoiceId { get; set; }
+        public ObjectId PaymentId { get; set; }
+
+        private RecordCollection recordCollection;
 
         public Record()
         {

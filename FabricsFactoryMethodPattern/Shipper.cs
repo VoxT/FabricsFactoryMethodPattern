@@ -10,6 +10,9 @@ namespace FabricsFactoryMethodPattern
 {
     public class Shipper
     {
+        public ObjectId EmployeeId { get; set; }
+        public string DriverLincenseNumber { get; set; }
+
         private ShipperCollection shipperCollection;
 
         public Shipper()

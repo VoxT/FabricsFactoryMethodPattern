@@ -10,10 +10,14 @@ namespace FabricsFactoryMethodPattern
 {
     public abstract class Price
     {
+        public ObjectId FabricsColorId { get; set; }
+        public DateTime Time { get; set; }
+        public int Price { get; set; }
     }
 
     public class CustomerPrice : Price
     {
+        public ObjectId CustomerId { get; set; }
         private CustomerPriceCollection customerPriceCollection;
 
         public CustomerPrice()
@@ -51,6 +55,7 @@ namespace FabricsFactoryMethodPattern
 
     public class SupplierPrice : Price
     {
+        public ObjectId SupplierId { get; set; }
         private SupplierPriceCollection supplierPriceCollection;
 
         public SupplierPrice()

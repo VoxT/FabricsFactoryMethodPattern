@@ -10,6 +10,11 @@ namespace FabricsFactoryMethodPattern
 {
     public class WareHouse
     {
+        public ObjectId Id { get; private set; }
+        public string Name { get; set; }
+        public int Areage { get; set; }
+        public string Address { get; set; }
+
         private WareHouseCollection wareHouseCollection;
 
         public WareHouse()
