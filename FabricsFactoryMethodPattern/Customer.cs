@@ -10,6 +10,14 @@ namespace FabricsFactoryMethodPattern
 {
     public class Customer
     {
+        public ObjectId Id { get; private set; }
+        public string CustomerName { get; set; }
+        public string CompanyName { get; set; }
+        public string TaxNumber { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
+        public double Debts { get; set; }
+
         private CustomerCollection customerCollection;
 
         public Customer()

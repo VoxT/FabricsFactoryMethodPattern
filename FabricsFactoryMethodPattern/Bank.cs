@@ -10,11 +10,14 @@ namespace FabricsFactoryMethodPattern
 {
     public abstract class Bank
     {
-
+        public string BankName { get; set; }
+        public string AccountNumber { get; set; }
     }
 
     public class CustomerBank : Bank
     {
+        public ObjectId CustomerId { get; set; }
+
         private CustomerBankCollection customerBankCollection;
 
         public CustomerBank()
@@ -52,6 +55,8 @@ namespace FabricsFactoryMethodPattern
 
     public class SupplierBank : Bank
     {
+        public ObjectId SupplierId { get; set; }
+
         private SupplierBankCollection supplierBankCollection;
 
         public SupplierBank()

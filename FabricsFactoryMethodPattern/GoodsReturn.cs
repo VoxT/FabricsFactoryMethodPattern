@@ -10,10 +10,14 @@ namespace FabricsFactoryMethodPattern
 {
     public abstract class GoodsReturn
     {
+        public ObjectId FabricsRoll { get; set; }
+        public DateTime Date { get; set; }
     }
 
     public class CustomerGoodsReturn : GoodsReturn
     {
+        public ObjectId CustomerId { get; set; }
+
         private CustomerGoodsReturnCollection customerGoodsReturnCollection;
 
         public CustomerGoodsReturn()
@@ -50,6 +54,8 @@ namespace FabricsFactoryMethodPattern
 
     public class SupplierGoodsReturn : GoodsReturn
     {
+        public ObjectId SupplierId { get; set; }
+
         private SupplierGoodsReturnCollection supplierGoodsReturnCollection;
 
         public SupplierGoodsReturn()

@@ -10,10 +10,15 @@ namespace FabricsFactoryMethodPattern
 {
     public abstract class Order
     {
+        public ObjectId Id { get; private set; }
+        public bool Status{ get; set; }
+        public DateTime Time { get; set; }
     }
 
     public class PurchaseOrder : Order
     {
+        public ObjectId EmployeeId { get; set; }
+
         private PurchaseOrderCollection purchaseOrderCollection;
 
         public PurchaseOrder()
@@ -51,6 +56,8 @@ namespace FabricsFactoryMethodPattern
 
     public class SalesOrder : Order
     {
+        public ObjectId CustomerId { get; set; }
+
         private SalesOrderCollection salesOrderCollection;
 
         public SalesOrder()

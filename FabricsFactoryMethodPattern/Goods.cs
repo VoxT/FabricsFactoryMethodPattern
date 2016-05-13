@@ -10,10 +10,16 @@ namespace FabricsFactoryMethodPattern
 {
     public abstract class Goods
     {
+        public ObjectId FabricsColor { get; set; }
+        public int TotalMetter { get; set; }
+        public int TotalRoll { get; set; }
+
     }
 
     public class GoodsSold : Goods
     {
+        public ObjectId SalesOrderId { get; set; }
+
         private GoodsSoldCollection goodsSoldCollection;
 
         public GoodsSold()
@@ -51,6 +57,8 @@ namespace FabricsFactoryMethodPattern
 
     public class PurchaseGoods : Goods
     {
+        public ObjectId PurchaseOrderId { get; set; }
+
         private PurchaseGoodsCollection purchaseGoodsCollection;
 
         public PurchaseGoods()

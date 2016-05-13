@@ -10,6 +10,18 @@ namespace FabricsFactoryMethodPattern
 {
     public abstract class Employee
     {
+        public ObjectId Id { get; private set; }
+        public string EmployeeName { get; set; }
+        public string BirthDate { get; set; }
+        public string IdentityCardNumber { get; set; }
+        public string Email { get; set; }
+        public string CellPhone { get; set; }
+        public string DeskPhone { get; set; }
+        public string Address { get; set; }
+        public int Salary { get; set; }
+        public DateTime Date { get; set; }
+        public string Degree { get; set; }
+
         public Employee()
         {
             invoice = CreateInvoice();

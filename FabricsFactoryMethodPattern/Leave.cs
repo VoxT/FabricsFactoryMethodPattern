@@ -10,6 +10,9 @@ namespace FabricsFactoryMethodPattern
 {
     public class Leave
     {
+        public ObjectId EmployeeId { get; set; }
+        public DateTime Date { get; set; }
+
         private LeaveCollection leaveCollection;
 
         public Leave()

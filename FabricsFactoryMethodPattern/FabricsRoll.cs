@@ -10,6 +10,13 @@ namespace FabricsFactoryMethodPattern
 {
     public class FabricsRoll
     {
+        public ObjectId Id { get; private set; }
+        public string Length { get; set; }
+        public ObjectId FabricsId { get; set; }
+        public ObjectId PlotsId { get; set; }
+        public ObjectId PurchaseInvoiceId { get; set; }
+        public ObjectId SalesInvoiceId { get; set; }
+
         private FabricsRollCollection fabricRollCollection;
 
         public FabricsRoll()

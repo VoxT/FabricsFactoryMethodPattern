@@ -9,7 +9,15 @@ using MongoDB.Bson;
 namespace FabricsFactoryMethodPattern
 {
     public class Supplier
-    { 
+    {
+        public ObjectId Id { get; private set; }
+        public string SupplierName { get; set; }
+        public string CompanyName { get; set; }
+        public string TaxNumber { get; set; }
+        public string Email { get; set; }
+        public string Address { get; set; }
+        public double Debts { get; set; }
+
         private SupplierCollection supplierCollection;
 
         public Supplier()

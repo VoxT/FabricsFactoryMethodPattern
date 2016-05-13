@@ -10,6 +10,14 @@ namespace FabricsFactoryMethodPattern
 {
     public class Delivery
     {
+
+        public ObjectId ShipperId { get; set; }
+        public ObjectId SalesInvoiceId { get; set; }
+        public string PackMethod { get; set; }
+        public string Address { get; set; }
+        public int Total { get; set; }
+        public string time { get; set; }
+
         private DeliveryCollection deliveryCollection;
 
         public Delivery()
