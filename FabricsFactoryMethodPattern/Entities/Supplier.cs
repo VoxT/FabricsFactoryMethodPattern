@@ -27,6 +27,8 @@ namespace FabricsFactoryMethodPattern.Entities
 
         public Supplier()
         {
+            GoodsReturn = new List<SupplierGoodsReturn>();
+            Prices = new List<SupplierPrice>();
         }
 
     }

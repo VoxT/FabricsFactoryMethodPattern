@@ -13,14 +13,14 @@ namespace FabricsFactoryMethodPattern.Entities
         public DateTime Time { get; set; }
         public string PaymentMethod { get; set; }
         public short DiscountPercent { get; set; }
+        public ObjectId EmployeeId { get; set; }
     }
 
     public class PurchaseInvoice : Invoice
     {
         public ObjectId WareHouseId { get; set; }
         public ObjectId SupplierId { get; set; }
-        public ObjectId PurchaseInvoiceId { get; set; }
-        public ObjectId EmployeeId { get; set; }
+        public ObjectId PurchaseOrderId { get; set; }
 
         public PurchaseInvoice()
         {
@@ -32,7 +32,6 @@ namespace FabricsFactoryMethodPattern.Entities
     {
         public ObjectId CustomerId { get; set; }
         public ObjectId SalesOrderId { get; set; }
-        public ObjectId EmployeeId { get; set; }
         public List<Delivery> Delivery { get; set; }
 
         public SalesInvoice()

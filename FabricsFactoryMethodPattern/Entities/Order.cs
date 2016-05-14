@@ -21,6 +21,7 @@ namespace FabricsFactoryMethodPattern.Entities
 
         public PurchaseOrder()
         {
+            PurchaseGoods = new List<PurchaseGoods>();
         }
 
     }
@@ -29,8 +30,10 @@ namespace FabricsFactoryMethodPattern.Entities
     {
         public ObjectId CustomerId { get; set; }
         public List<GoodsSold> GoodsSold { get; set; }
+
         public SalesOrder()
         {
+            GoodsSold = new List<GoodsSold>();
         }
 
     }

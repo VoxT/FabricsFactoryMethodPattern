@@ -39,3 +39,6 @@ F:\GoogleDrive\code\FabricsFactoryMethodPattern - Copy\FabricsFactoryMethodPatte
 F:\GoogleDrive\code\FabricsFactoryMethodPattern - Copy\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.Core.xml
 F:\GoogleDrive\code\FabricsFactoryMethodPattern - Copy\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.Legacy.pdb
 F:\GoogleDrive\code\FabricsFactoryMethodPattern - Copy\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.Legacy.xml
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.Legacy.dll
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.Legacy.pdb
+F:\GoogleDrive\code\FabricsFactoryMethodPattern\FabricsFactoryMethodPattern\bin\Debug\MongoDB.Driver.Legacy.xml

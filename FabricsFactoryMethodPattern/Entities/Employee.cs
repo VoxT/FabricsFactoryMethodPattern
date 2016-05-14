@@ -22,6 +22,7 @@ namespace FabricsFactoryMethodPattern.Entities
         public Employee()
         {
             invoice = CreateInvoice();
+            Leave = new List<Leave>();
         }
 
         public Invoice invoice { get; set; }

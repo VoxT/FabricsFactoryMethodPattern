@@ -19,6 +19,12 @@ namespace FabricsFactoryMethodPattern.Entities
 
         [BsonElement("address")]
         public string Address { get; set; }
+
+        public Person()
+        {
+            CellPhones = new List<CellPhone>();
+            DeskPhones = new List<DeskPhone>();
+        }
     }
 
 }

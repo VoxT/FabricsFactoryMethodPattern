@@ -20,6 +20,8 @@ namespace FabricsFactoryMethodPattern.Entities
 
         public Customer()
         {
+            GoodsReturn = new List<CustomerGoodsReturn>();
+            Prices = new List<CustomerPrice>();
         }
 
     }
