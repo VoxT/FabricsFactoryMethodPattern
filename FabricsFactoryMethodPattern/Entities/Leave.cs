@@ -21,7 +21,6 @@ namespace FabricsFactoryMethodPattern.Entities
             this.Date = DateTime.Now;
         }
 
-        [BsonConstructor]
         public Leave(DateTime date)
         {
             this.Date = date;

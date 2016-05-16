@@ -30,19 +30,18 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("payment_id")]
         public ObjectId PaymentId { get; set; }
 
+        [BsonConstructor]
         public Record()
         {
             Time = DateTime.Now;
         }
 
-        [BsonConstructor]
         public Record(double money, string note)
         {
             this.Monney = money;
             this.Note = note;
         }
 
-        [BsonConstructor]
         public Record(double money, string note, DateTime time)
         {
             this.Monney = money;

@@ -27,12 +27,12 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("time")]
         public DateTime Time { get; set; }
 
+        [BsonConstructor]
         public Delivery()
         {
             this.Time = DateTime.Now;
         }
 
-        [BsonConstructor]
         public Delivery(ObjectId shipperId, string packMethod, string address, int total)
         {
             this.ShipperId = shipperId;
@@ -41,7 +41,6 @@ namespace FabricsFactoryMethodPattern.Entities
             this.Total = total;
         }
 
-        [BsonConstructor]
         public Delivery(ObjectId shipperId, string packMethod, string address, int total, DateTime time)
         {
             this.ShipperId = shipperId;

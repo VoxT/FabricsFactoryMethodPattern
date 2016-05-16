@@ -34,12 +34,12 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("purchase_goods")]
         public List<Goods> PurchaseGoods { get; set; }
 
+        [BsonConstructor]
         public PurchaseOrder()
         {
             PurchaseGoods = new List<Goods>();
         }
 
-        [BsonConstructor]
         public PurchaseOrder(ObjectId employeeId, List<Goods> purchaseGoods, Status status)
         {
             this.EmployeeId = employeeId;
@@ -47,7 +47,6 @@ namespace FabricsFactoryMethodPattern.Entities
             this.Status = status;
         }
 
-        [BsonConstructor]
         public PurchaseOrder(ObjectId employeeId, List<Goods> purchaseGoods, Status status, DateTime time)
         {
             this.EmployeeId = employeeId;
@@ -67,12 +66,12 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("goods_sold")]
         public List<Goods> GoodsSold { get; set; }
 
+        [BsonConstructor]
         public SalesOrder()
         {
             GoodsSold = new List<Goods>();
         }
 
-        [BsonConstructor]
         public SalesOrder(ObjectId customerId, List<Goods> goodsSold, Status status)
         {
             this.CustomerId = customerId;
@@ -80,7 +79,6 @@ namespace FabricsFactoryMethodPattern.Entities
             this.Status = status;
         }
 
-        [BsonConstructor]
         public SalesOrder(ObjectId customerId, List<Goods> goodsSold, Status status, DateTime time)
         {
             this.CustomerId = customerId;

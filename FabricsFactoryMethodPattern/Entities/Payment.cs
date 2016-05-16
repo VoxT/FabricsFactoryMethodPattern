@@ -45,12 +45,12 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("supplier_id")]
         public ObjectId SupplierId { get; set; }
 
+        [BsonConstructor]
         public Payment()
         {
             this.Time = DateTime.Now;
         }
 
-        [BsonConstructor]
         public Payment(ObjectId employeeId, PaymentType paymentType, string recipientOrSender, PaymentMethod paymentMethod, string bankName, string accountNumber, double money, ObjectId customerIdOrSupplierId)
         {
             this.PaymentType = paymentType;
@@ -75,7 +75,6 @@ namespace FabricsFactoryMethodPattern.Entities
             this.Money = money;
         }
 
-        [BsonConstructor]
         public Payment(ObjectId employeeId, PaymentType paymentType, string recipientOrSender, PaymentMethod paymentMethod, string bankName, string accountNumber, double money, ObjectId customerIdOrSupplierId, DateTime time)
         {
             this.PaymentType = paymentType;

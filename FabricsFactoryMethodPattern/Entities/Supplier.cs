@@ -29,14 +29,14 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("prices")]
         public List<Prices> Prices { get; set; }
 
+        [BsonConstructor]
         public Supplier()
         {
             GoodsReturn = new List<GoodsReturn>();
             Prices = new List<Prices>();
         }
 
-        [BsonConstructor]
-        public Supplier(string firstName, string lastName, string email, string address, List<CellPhone> cellPhone, List<DeskPhone> deskPhone, Bank bank)
+        public Supplier(string firstName, string lastName, string email, string address, List<Phone> cellPhone, List<Phone> deskPhone, Bank bank)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
@@ -47,15 +47,14 @@ namespace FabricsFactoryMethodPattern.Entities
             this.Bank = bank;
         }
 
-        [BsonConstructor]
-        public Supplier(string firstName, string lastName, string email, string address, CellPhone cellPhone, DeskPhone deskPhone, Bank bank)
+        public Supplier(string firstName, string lastName, string email, string address, Phone cellPhone, Phone deskPhone, Bank bank)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
             this.Email = email;
             this.Address = address;
-            this.CellPhones = new List<CellPhone> { cellPhone };
-            this.DeskPhones = new List<DeskPhone> { deskPhone };
+            this.CellPhones = new List<Phone> { cellPhone };
+            this.DeskPhones = new List<Phone> { deskPhone };
             this.Bank = bank;
         }
 

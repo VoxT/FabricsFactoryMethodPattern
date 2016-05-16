@@ -21,7 +21,6 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("total_roll")]
         public int TotalRoll { get; set; }
 
-        [BsonConstructor]
         public Goods() { }
 
         [BsonConstructor]

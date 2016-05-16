@@ -18,6 +18,7 @@ namespace FabricsFactoryMethodPattern.Services
 
         protected EntityService()
         {
+            Console.WriteLine(typeof(T).Name.ToLower() + "s");
             Collection = this.DatabaseHandler.GetCollection<T>(typeof(T).Name.ToLower() + "s"); ;
         }
 

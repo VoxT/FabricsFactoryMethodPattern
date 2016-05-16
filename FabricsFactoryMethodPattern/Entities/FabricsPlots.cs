@@ -21,7 +21,6 @@ namespace FabricsFactoryMethodPattern.Entities
             this.Time = DateTime.Now;
         }
 
-        [BsonConstructor]
         public FabricsPlots(DateTime time)
         {
             this.Time = time;

@@ -22,15 +22,15 @@ namespace FabricsFactoryMethodPattern.Entities
         public string Address { get; set; }
 
         [BsonElement("cell_phone")]
-        public List<CellPhone> CellPhones { get; set; }
+        public List<Phone> CellPhones { get; set; }
 
         [BsonElement("desk_phone")]
-        public List<DeskPhone> DeskPhones { get; set; }
+        public List<Phone> DeskPhones { get; set; }
 
         public Person()
         {
-            this.CellPhones = new List<CellPhone>();
-            this.DeskPhones = new List<DeskPhone>();
+            this.CellPhones = new List<Phone>();
+            this.DeskPhones = new List<Phone>();
         }
     }
 

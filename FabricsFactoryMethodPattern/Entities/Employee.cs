@@ -33,14 +33,14 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("leave")]
         public List<Leave> Leave { get; set; }
 
+        [BsonConstructor]
         public Employee()
         {
             this.JoinDate = DateTime.Now;
         }
         
-        [BsonConstructor]
         public Employee(string firstName, string lastName, string identityCardNumber, DateTime birthDate, string email, 
-            string address, CellPhone cellPhone, DeskPhone deskPhone, int salary, string degree, Shipper shipper)
+            string address, Phone cellPhone, Phone deskPhone, int salary, string degree, Shipper shipper)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
@@ -48,16 +48,15 @@ namespace FabricsFactoryMethodPattern.Entities
             this.BirthDate = birthDate;
             this.Email = email;
             this.Address = address;
-            this.CellPhones = new List<CellPhone> { cellPhone };
-            this.DeskPhones = new List<DeskPhone> { deskPhone };
+            this.CellPhones = new List<Phone> { cellPhone };
+            this.DeskPhones = new List<Phone> { deskPhone };
             this.Salary = salary;
             this.Degree = degree;
             this.Shipper = shipper;
         }
 
-        [BsonConstructor]
         public Employee(string firstName, string lastName, string identityCardNumber, DateTime birthDate, string email, 
-            string address, CellPhone cellPhone, DeskPhone deskPhone, int salary, string degree, Shipper shipper, DateTime joinDate)
+            string address, Phone cellPhone, Phone deskPhone, int salary, string degree, Shipper shipper, DateTime joinDate)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
@@ -65,8 +64,8 @@ namespace FabricsFactoryMethodPattern.Entities
             this.BirthDate = birthDate;
             this.Email = email;
             this.Address = address;
-            this.CellPhones = new List<CellPhone> { cellPhone };
-            this.DeskPhones = new List<DeskPhone> { deskPhone };
+            this.CellPhones = new List<Phone> { cellPhone };
+            this.DeskPhones = new List<Phone> { deskPhone };
             this.Salary = salary;
             this.Degree = degree;
             this.Shipper = shipper;

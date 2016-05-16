@@ -42,11 +42,11 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("purchase_order_id")]
         public ObjectId PurchaseOrderId { get; set; }
 
+        [BsonConstructor]
         public PurchaseInvoice()
         {
         }
 
-        [BsonConstructor]
         public PurchaseInvoice(ObjectId employeeId, ObjectId supplierId, ObjectId purchaseOrderId, ObjectId wareHouse, string paymentMethod, short discountPercent)
         {
             this.EmployeeId = employeeId;
@@ -57,7 +57,6 @@ namespace FabricsFactoryMethodPattern.Entities
             this.DiscountPercent = discountPercent;
         }
 
-        [BsonConstructor]
         public PurchaseInvoice(ObjectId employeeId, ObjectId supplierId, ObjectId purchaseOrderId, ObjectId wareHouse, string paymentMethod, short discountPercent, DateTime time)
         {
             this.EmployeeId = employeeId;
@@ -83,11 +82,11 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("delivery")]
         public List<Delivery> Delivery { get; set; }
 
+        [BsonConstructor]
         public SalesInvoice()
         {
         }
 
-        [BsonConstructor]
         public SalesInvoice(ObjectId employeeId, ObjectId customerId, ObjectId salesOrderId, string paymentMethod, short discountPercent, Delivery delivery)
         {
             this.EmployeeId = employeeId;
@@ -98,7 +97,6 @@ namespace FabricsFactoryMethodPattern.Entities
             this.DiscountPercent = discountPercent;
         }
 
-        [BsonConstructor]
         public SalesInvoice(ObjectId employeeId, ObjectId customerId, ObjectId salesOrderId, string paymentMethod, short discountPercent, Delivery delivery, DateTime time)
         {
             this.EmployeeId = employeeId;

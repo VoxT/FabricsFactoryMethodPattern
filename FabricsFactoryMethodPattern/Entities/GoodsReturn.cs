@@ -24,13 +24,11 @@ namespace FabricsFactoryMethodPattern.Entities
             this.Date = DateTime.Now;
         }
 
-        [BsonConstructor]
         public GoodsReturn(ObjectId fabricsRollId)
         {
             this.FabricsRollId = fabricsRollId;
         }
 
-        [BsonConstructor]
         public GoodsReturn(ObjectId fabricsRollId, DateTime date)
         {
             this.FabricsRollId = fabricsRollId;

@@ -9,36 +9,17 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace FabricsFactoryMethodPattern.Entities
 {
-    public abstract class Phone
+    public class Phone
     {
-    }
-
-    public class CellPhone : Phone
-    {
-
-        [BsonElement("cellphone_number")]
-        public string CellPhoneNumber { get; set; }
+        [BsonElement("phone")]
+        public string PhoneNumber { get; set; }
 
         [BsonConstructor]
-        public CellPhone(string cellPhoneNumber)
+        public Phone(string phoneNumber)
         {
-            this.CellPhoneNumber = cellPhoneNumber;
+            this.PhoneNumber = phoneNumber;
         }
-
     }
 
-    public class DeskPhone : Phone
-    {
-
-        [BsonElement("deskphone_number")]
-        public string DeskPhoneNumber { get; set; }
-
-        [BsonConstructor]
-        public DeskPhone(string deskPhone)
-        {
-            this.DeskPhoneNumber = deskPhone;
-        }
-
-    }
 
 }

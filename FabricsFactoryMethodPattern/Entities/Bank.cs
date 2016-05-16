@@ -9,13 +9,15 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace FabricsFactoryMethodPattern.Entities
 {
-    public abstract class Bank
+    public class Bank
     {
         [BsonElement("bank_name")]
         public string BankName { get; set; }
 
         [BsonElement("account_number")]
         public string AccountNumber { get; set; }
+
+        public Bank() { }
 
         [BsonConstructor]
         public Bank(string bankName, string accountNumber)

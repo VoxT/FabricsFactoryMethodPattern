@@ -15,7 +15,8 @@ namespace FabricsFactoryMethodPattern.Services
 
         public Database()
         {
-            MongoClient connection = (new Connection()).ConnectionHandler;
+            Connection con = new Connection();
+            MongoClient connection = con.ConnectionHandler;
 
             database = connection.GetDatabase("fabrics");
         }

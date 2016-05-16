@@ -9,7 +9,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace FabricsFactoryMethodPattern.Entities
 {
-    public abstract class Prices
+    public class Prices
     {
 
         [BsonElement("fabrics_color_id")]
@@ -21,12 +21,12 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("price")]
         public int Price { get; set; }
 
+        [BsonConstructor]
         public Prices()
         {
             this.Time = DateTime.Now;
         }
 
-        [BsonConstructor]
         public Prices(ObjectId fabricsColorId, int price)
         {
             this.FabricsColorId = fabricsColorId;
@@ -34,7 +34,6 @@ namespace FabricsFactoryMethodPattern.Entities
             this.Time = DateTime.Now;
         }
 
-        [BsonConstructor]
         public Prices(ObjectId fabricsColorId, int price, DateTime time)
         {
             this.FabricsColorId = fabricsColorId;
