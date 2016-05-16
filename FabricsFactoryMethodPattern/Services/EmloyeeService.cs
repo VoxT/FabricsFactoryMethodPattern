@@ -8,7 +8,7 @@ namespace FabricsFactoryMethodPattern.Services
 {
     using Entities;
 
-    public class EmloyeeService : EntityService<Employee>
+    public class EmloyeeService : PersonService<Employee>
     {
         public EmloyeeService()
         {

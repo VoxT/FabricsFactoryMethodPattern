@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace FabricsFactoryMethodPattern.Services
 {
     using Entities;
-    public class SupplierService : EntityService<Supplier>
+    public class SupplierService : PersonService<Supplier>
     {
         public SupplierService()
         {

@@ -3,17 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FabricsFactoryMethodPattern.Entities;
 
 namespace FabricsFactoryMethodPattern.Services
 {
-    using Entities;
-    public class CustomerService : PersonService<Customer>
+    public abstract class PersonService<T> : EntityService<T>  where T : IEntity
     {
-        public CustomerService()
-        {
-        }
 
-        public void AddFabricsPrice()
-        { }
     }
 }
