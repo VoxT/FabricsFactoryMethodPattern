@@ -12,6 +12,6 @@ namespace FabricsFactoryMethodPattern.Entities
     public abstract class Entity : IEntity
     {
         [BsonId]
-        public ObjectId Id { get; private set; }
+        public ObjectId Id { get; set; }
     }
 }

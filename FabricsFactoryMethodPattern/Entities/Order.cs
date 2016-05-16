@@ -13,10 +13,10 @@ namespace FabricsFactoryMethodPattern.Entities
 {
     public abstract class Order : Entity
     {
-        [BsonElement("date")]
+        [BsonElement("status")]
         public Status Status { get; set; }
 
-        [BsonElement("date")]
+        [BsonElement("time")]
         public DateTime Time { get; set; }
 
         public Order()
@@ -28,10 +28,10 @@ namespace FabricsFactoryMethodPattern.Entities
     public class PurchaseOrder : Order
     {
 
-        [BsonElement("date")]
+        [BsonElement("employee_id")]
         public ObjectId EmployeeId { get; set; }
 
-        [BsonElement("date")]
+        [BsonElement("purchase_goods")]
         public List<Goods> PurchaseGoods { get; set; }
 
         public PurchaseOrder()
@@ -61,10 +61,10 @@ namespace FabricsFactoryMethodPattern.Entities
     public class SalesOrder : Order
     {
 
-        [BsonElement("date")]
+        [BsonElement("customer_id")]
         public ObjectId CustomerId { get; set; }
 
-        [BsonElement("date")]
+        [BsonElement("goods_sold")]
         public List<Goods> GoodsSold { get; set; }
 
         public SalesOrder()
