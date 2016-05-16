@@ -20,15 +20,43 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("debs")]
         public double Debts { get; set; }
 
-        public SupplierBank Bank { get; set; }
+        [BsonElement("bank")]
+        public Bank Bank { get; set; }
+        
+        [BsonElement("goods_return")]
+        public List<GoodsReturn> GoodsReturn { get; set; }
 
-        public List<SupplierGoodsReturn> GoodsReturn { get; set; }
-        public List<SupplierPrice> Prices { get; set; }
+        [BsonElement("prices")]
+        public List<Prices> Prices { get; set; }
 
         public Supplier()
         {
-            GoodsReturn = new List<SupplierGoodsReturn>();
-            Prices = new List<SupplierPrice>();
+            GoodsReturn = new List<GoodsReturn>();
+            Prices = new List<Prices>();
+        }
+
+        [BsonConstructor]
+        public Supplier(string firstName, string lastName, string email, string address, List<CellPhone> cellPhone, List<DeskPhone> deskPhone, Bank bank)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Email = email;
+            this.Address = address;
+            this.CellPhones = cellPhone;
+            this.DeskPhones = deskPhone;
+            this.Bank = bank;
+        }
+
+        [BsonConstructor]
+        public Supplier(string firstName, string lastName, string email, string address, CellPhone cellPhone, DeskPhone deskPhone, Bank bank)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Email = email;
+            this.Address = address;
+            this.CellPhones = new List<CellPhone> { cellPhone };
+            this.DeskPhones = new List<DeskPhone> { deskPhone };
+            this.Bank = bank;
         }
 
     }

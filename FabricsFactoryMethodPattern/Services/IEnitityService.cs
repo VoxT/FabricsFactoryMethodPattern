@@ -12,7 +12,7 @@ namespace FabricsFactoryMethodPattern.Services
     {
         void Create(T entity);
 
-        void Delete(string id);
+        bool Delete(string id);
 
         T GetById(string id);
 

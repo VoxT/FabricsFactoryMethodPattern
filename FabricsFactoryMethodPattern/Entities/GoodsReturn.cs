@@ -5,32 +5,37 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Driver;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace FabricsFactoryMethodPattern.Entities
 {
-    public abstract class GoodsReturn
+    public class GoodsReturn
     {
+
+        [BsonElement("fabrics_roll_id")]
         public ObjectId FabricsRollId { get; set; }
+
+        [BsonElement("date")]
         public DateTime Date { get; set; }
-    }
 
-    public class CustomerGoodsReturn : GoodsReturn
-    {
-        public ObjectId CustomerId { get; set; }
-
-        public CustomerGoodsReturn()
+        [BsonConstructor]
+        public GoodsReturn()
         {
+            this.Date = DateTime.Now;
         }
 
-    }
-
-    public class SupplierGoodsReturn : GoodsReturn
-    {
-        public ObjectId SupplierId { get; set; }
-
-        public SupplierGoodsReturn()
+        [BsonConstructor]
+        public GoodsReturn(ObjectId fabricsRollId)
         {
+            this.FabricsRollId = fabricsRollId;
         }
 
+        [BsonConstructor]
+        public GoodsReturn(ObjectId fabricsRollId, DateTime date)
+        {
+            this.FabricsRollId = fabricsRollId;
+            this.Date = date;
+        }
     }
+
 }

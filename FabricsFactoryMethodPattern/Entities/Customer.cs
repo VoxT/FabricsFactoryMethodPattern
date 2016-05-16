@@ -11,17 +11,53 @@ namespace FabricsFactoryMethodPattern.Entities
 {
     public class Customer : Person
     {
+        [BsonElement("company_name")]
         public string CompanyName { get; set; }
-        public string TaxNumber { get; set; }
-        public double Debts { get; set; }
-        public CustomerBank Bank { get; set; }
-        public List<CustomerGoodsReturn> GoodsReturn { get; set; }
-        public List<CustomerPrice> Prices { get; set; }
 
+        [BsonElement("taxt_number")]
+        public string TaxNumber { get; set; }
+
+        [BsonElement("debts")]
+        public double Debts { get; set; }
+
+        [BsonElement("bank")]
+        public Bank Bank { get; set; }
+
+        [BsonElement("goods_return")]
+        public List<GoodsReturn> GoodsReturn { get; set; }
+
+        [BsonElement("prices")]
+        public List<Prices> Prices { get; set; }
+
+        [BsonConstructor]
         public Customer()
         {
-            GoodsReturn = new List<CustomerGoodsReturn>();
-            Prices = new List<CustomerPrice>();
+            GoodsReturn = new List<GoodsReturn>();
+            Prices = new List<Prices>();
+        }
+
+        [BsonConstructor]
+        public Customer(string firstName, string lastName, string email, string address, List<CellPhone> cellPhone, List<DeskPhone> deskPhone, Bank bank)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Email = email;
+            this.Address = address;
+            this.CellPhones = cellPhone;
+            this.DeskPhones = deskPhone;
+            this.Bank = bank;
+        }
+
+        [BsonConstructor]
+        public Customer(string firstName, string lastName, string email, string address, CellPhone cellPhone, DeskPhone deskPhone, Bank bank)
+        {
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.Email = email;
+            this.Address = address;
+            this.CellPhones = new List<CellPhone> { cellPhone };
+            this.DeskPhones = new List<DeskPhone> { deskPhone };
+            this.Bank = bank;
         }
 
     }

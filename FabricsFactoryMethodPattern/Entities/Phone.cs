@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Driver;
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace FabricsFactoryMethodPattern.Entities
 {
@@ -12,15 +13,32 @@ namespace FabricsFactoryMethodPattern.Entities
     {
     }
 
-    public abstract class CellPhone : Phone
+    public class CellPhone : Phone
     {
+
+        [BsonElement("cellphone_number")]
         public string CellPhoneNumber { get; set; }
+
+        [BsonConstructor]
+        public CellPhone(string cellPhoneNumber)
+        {
+            this.CellPhoneNumber = cellPhoneNumber;
+        }
 
     }
 
-    public abstract class DeskPhone : Phone
+    public class DeskPhone : Phone
     {
+
+        [BsonElement("deskphone_number")]
         public string DeskPhoneNumber { get; set; }
+
+        [BsonConstructor]
+        public DeskPhone(string deskPhone)
+        {
+            this.DeskPhoneNumber = deskPhone;
+        }
+
     }
 
 }

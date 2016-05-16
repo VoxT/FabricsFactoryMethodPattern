@@ -23,6 +23,14 @@ namespace FabricsFactoryMethodPattern.Entities
         public WareHouse()
         {
         }
+
+        [BsonConstructor]
+        public WareHouse(string name, int areage, string address)
+        {
+            this.Name = name;
+            this.Areage = areage;
+            this.Address = address;
+        }
         
     }
 }

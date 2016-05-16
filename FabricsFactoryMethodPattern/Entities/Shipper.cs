@@ -18,5 +18,11 @@ namespace FabricsFactoryMethodPattern.Entities
         {
         }
 
+        [BsonConstructor]
+        public Shipper(string driveLincenseNumber)
+        {
+            this.DriverLincenseNumber = driveLincenseNumber;
+        }
+
     }
 }

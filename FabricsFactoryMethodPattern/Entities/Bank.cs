@@ -16,21 +16,13 @@ namespace FabricsFactoryMethodPattern.Entities
 
         [BsonElement("account_number")]
         public string AccountNumber { get; set; }
-    }
 
-    public class CustomerBank : Bank
-    {
-        public CustomerBank()
+        [BsonConstructor]
+        public Bank(string bankName, string accountNumber)
         {
+            BankName = bankName;
+            AccountNumber = accountNumber;
         }
-
     }
 
-    public class SupplierBank : Bank
-    {
-        public SupplierBank()
-        {
-        }
-
-    }
 }

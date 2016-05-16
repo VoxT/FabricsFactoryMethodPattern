@@ -13,24 +13,35 @@ namespace FabricsFactoryMethodPattern.Services
  
     public abstract class EntityService<T> : Database, IEntityService<T> where T : IEntity
     {
-        public IMongoCollection<T> Collection { get; private set; }
+        protected static IMongoCollection<T> Collection { get; private set; }
+
+
+        protected EntityService()
+        {
+            Collection = this.DatabaseHandler.GetCollection<T>(typeof(T).Name.ToLower() + "s"); ;
+        }
+
+        public virtual void CreateIndex(string[] fields)
+        {
+            var options = new CreateIndexOptions { Unique = true };
+            foreach (string field in fields)
+            {
+                Collection.Indexes.CreateOne(field, options);
+            }
+        }
  
         public virtual void Create(T entity)
         {
             Collection.InsertOne(entity);
+            
         }
  
-        public virtual void Delete(string id)
+        public virtual bool Delete(string id)
         {
             var filter = Builders<T>.Filter.Eq("_id", ObjectId.Parse(id));
-            var document = Collection.DeleteOne(filter);
+            var result = Collection.DeleteOne(filter);
 
-            if (document.IsAcknowledged) { }
-        }
- 
-        protected EntityService()
-        {
-            Collection = this.DatabaseHandler.GetCollection<T>(typeof(T).Name.ToLower() + "s"); ;
+            return ( result.DeletedCount >= 1);
         }
  
         public virtual T GetById(string id)

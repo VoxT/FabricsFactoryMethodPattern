@@ -9,65 +9,69 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace FabricsFactoryMethodPattern.Entities
 {
-    public abstract class Employee : Person
+    public class Employee : Person
     {
-        public string BirthDate { get; set; }
+
+        [BsonElement("birth_date")]
+        public DateTime BirthDate { get; set; }
+
+        [BsonElement("indentity_card_number")]
         public string IdentityCardNumber { get; set; }
+
+        [BsonElement("salary")]
         public int Salary { get; set; }
-        public DateTime Date { get; set; }
+
+        [BsonElement("join_date")]
+        public DateTime JoinDate { get; set; }
+
+        [BsonElement("degree")]
         public string Degree { get; set; }
+
+        [BsonElement("shipper")]
         public Shipper Shipper { get; set; }
+
+        [BsonElement("leave")]
         public List<Leave> Leave { get; set; }
 
         public Employee()
         {
-            invoice = CreateInvoice();
-            Leave = new List<Leave>();
+            this.JoinDate = DateTime.Now;
         }
-
-        public Invoice invoice { get; set; }
-
-        public abstract Invoice CreateInvoice();
-
-        public void DisplayWhoCreateInvoice()
+        
+        [BsonConstructor]
+        public Employee(string firstName, string lastName, string identityCardNumber, DateTime birthDate, string email, 
+            string address, CellPhone cellPhone, DeskPhone deskPhone, int salary, string degree, Shipper shipper)
         {
-            Console.WriteLine(invoice.GetType().ToString());
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.IdentityCardNumber = identityCardNumber;
+            this.BirthDate = birthDate;
+            this.Email = email;
+            this.Address = address;
+            this.CellPhones = new List<CellPhone> { cellPhone };
+            this.DeskPhones = new List<DeskPhone> { deskPhone };
+            this.Salary = salary;
+            this.Degree = degree;
+            this.Shipper = shipper;
         }
 
-    }
-
-    public class Importer : Employee
-    {
-        private Supplier supplier;
-
-        public override Invoice CreateInvoice()
+        [BsonConstructor]
+        public Employee(string firstName, string lastName, string identityCardNumber, DateTime birthDate, string email, 
+            string address, CellPhone cellPhone, DeskPhone deskPhone, int salary, string degree, Shipper shipper, DateTime joinDate)
         {
-            return new PurchaseInvoice();
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.IdentityCardNumber = identityCardNumber;
+            this.BirthDate = birthDate;
+            this.Email = email;
+            this.Address = address;
+            this.CellPhones = new List<CellPhone> { cellPhone };
+            this.DeskPhones = new List<DeskPhone> { deskPhone };
+            this.Salary = salary;
+            this.Degree = degree;
+            this.Shipper = shipper;
+            this.JoinDate = joinDate;
         }
 
-        public Supplier GetSupplierService()
-        {
-            supplier = new Supplier();
-
-            return supplier;
-        }
-
-    }
-
-    public class Seller : Employee
-    {
-        private Customer customer;
-
-        public override Invoice CreateInvoice()
-        {
-            return new SalesInvoice();
-        }
-
-        public Customer GetCustomerService()
-        {
-            customer = new Customer();
-
-            return customer;
-        }
     }
 }

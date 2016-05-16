@@ -12,5 +12,8 @@ namespace FabricsFactoryMethodPattern.Services
         public CustomerService()
         {
         }
+
+        public void AddFabricsPrice()
+        { }
     }
 }

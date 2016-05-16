@@ -11,9 +11,7 @@ namespace FabricsFactoryMethodPattern.Services
     {
         private static MongoClient _connection;
 
-        public Connection() { }
-
-        public void CreateConnection()
+        public Connection() 
         {
             _connection = new MongoClient("mongodb://localhost:27017");
         }
