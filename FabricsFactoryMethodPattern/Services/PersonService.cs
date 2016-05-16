@@ -11,18 +11,18 @@ namespace FabricsFactoryMethodPattern.Services
 {
     public abstract class PersonService<T> : EntityService<T>  where T : Person
     {
-        public void AddCellPhone(string id, Phone Phone)
+        public void AddCellPhone(string id, Phone phone)
         {
             var filter = Builders<T>.Filter.Eq(p => p.Id, ObjectId.Parse(id));
-            var update = Builders<T>.Update.Push<Phone>(p => p.CellPhones, Phone);
+            var update = Builders<T>.Update.Push<Phone>(p => p.CellPhones, phone);
             var updateResult = this.Collection.UpdateOne(filter, update);
 
         }
 
-        public void AddCellPhone(string id, List<Phone> Phones)
+        public void AddCellPhone(string id, List<Phone> phones)
         {
             var filter = Builders<T>.Filter.Eq(p => p.Id, ObjectId.Parse(id));
-            foreach (var value in Phones)
+            foreach (var value in phones)
             {
                 var update = Builders<T>.Update.Push<Phone>(p => p.CellPhones, value);
                 this.Collection.UpdateOne(filter, update);
@@ -30,18 +30,18 @@ namespace FabricsFactoryMethodPattern.Services
 
         }
 
-        public void AddDeskPhone(string id, Phone Phone)
+        public void AddDeskPhone(string id, Phone phone)
         {
             var filter = Builders<T>.Filter.Eq(p => p.Id, ObjectId.Parse(id));
-            var update = Builders<T>.Update.Push<Phone>(p => p.DeskPhones, Phone);
+            var update = Builders<T>.Update.Push<Phone>(p => p.DeskPhones, phone);
             var updateResult = this.Collection.UpdateOne(filter, update);
 
         }
 
-        public void AddDeskPhone(string id, List<Phone> Phones)
+        public void AddDeskPhone(string id, List<Phone> phones)
         {
             var filter = Builders<T>.Filter.Eq(p => p.Id, ObjectId.Parse(id));
-            foreach (var value in Phones)
+            foreach (var value in phones)
             {
                 var update = Builders<T>.Update.Push<Phone>(p => p.DeskPhones, value);
                 this.Collection.UpdateOne(filter, update);
