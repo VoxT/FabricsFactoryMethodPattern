@@ -34,4 +34,32 @@ namespace FabricsFactoryMethodPattern.Entities
         }
     }
 
+    public abstract class Businessperson : Person
+    {
+
+        [BsonElement("company_name")]
+        public string CompanyName { get; set; }
+
+        [BsonElement("tax_number")]
+        public string TaxNumber { get; set; }
+
+        [BsonElement("debts")]
+        public double Debts { get; set; }
+
+        [BsonElement("bank")]
+        public Bank Bank { get; set; }
+
+        [BsonElement("goods_return")]
+        public List<GoodsReturn> GoodsReturn { get; set; }
+
+        [BsonElement("prices")]
+        public List<Prices> Prices { get; set; }
+
+        public Businessperson()
+        {
+            this.GoodsReturn = new List<GoodsReturn>();
+            this.Prices = new List<Prices>();
+        }
+
+    }
 }

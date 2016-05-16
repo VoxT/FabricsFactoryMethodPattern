@@ -9,31 +9,11 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace FabricsFactoryMethodPattern.Entities
 {
-    public class Supplier : Person
+    public class Supplier : Businessperson
     {
-        [BsonElement("company_name")]
-        public string CompanyName { get; set; }
-
-        [BsonElement("taxt_number")]
-        public string TaxNumber { get; set; }
-
-        [BsonElement("debs")]
-        public double Debts { get; set; }
-
-        [BsonElement("bank")]
-        public Bank Bank { get; set; }
-        
-        [BsonElement("goods_return")]
-        public List<GoodsReturn> GoodsReturn { get; set; }
-
-        [BsonElement("prices")]
-        public List<Prices> Prices { get; set; }
-
         [BsonConstructor]
         public Supplier()
         {
-            GoodsReturn = new List<GoodsReturn>();
-            Prices = new List<Prices>();
         }
 
         public Supplier(string firstName, string lastName, string email, string address, List<Phone> cellPhone, List<Phone> deskPhone, Bank bank)
