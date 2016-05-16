@@ -13,7 +13,7 @@ namespace FabricsFactoryMethodPattern.Services
  
     public abstract class EntityService<T> : Database, IEntityService<T> where T : IEntity
     {
-        protected static IMongoCollection<T> Collection { get; private set; }
+        protected IMongoCollection<T> Collection { get; private set; }
 
 
         protected EntityService()
