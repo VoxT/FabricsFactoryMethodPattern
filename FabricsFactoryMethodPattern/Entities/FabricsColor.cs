@@ -18,11 +18,11 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("fabrics_id")]
         public ObjectId FabricsId { get; set; }
 
+        [BsonConstructor]
         public FabricsColor()
         {
         }
 
-        [BsonConstructor]
         public FabricsColor(string colorName, ObjectId fabricsId)
         {
             this.ColorName = colorName;

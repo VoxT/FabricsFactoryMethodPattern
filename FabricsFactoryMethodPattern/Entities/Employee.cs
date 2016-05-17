@@ -11,7 +11,7 @@ namespace FabricsFactoryMethodPattern.Entities
 {
     public class Employee : Person
     {
-
+        [BsonDateTimeOptions(DateOnly = true)]
         [BsonElement("birth_date")]
         public DateTime BirthDate { get; set; }
 
@@ -48,14 +48,14 @@ namespace FabricsFactoryMethodPattern.Entities
             this.BirthDate = birthDate;
             this.Email = email;
             this.Address = address;
-            this.CellPhones = new List<Phone> { cellPhone };
-            this.DeskPhones = new List<Phone> { deskPhone };
+            this.CellPhones = new List<Phone>() { cellPhone };
+            this.DeskPhones = new List<Phone>() { deskPhone };
             this.Salary = salary;
             this.Degree = degree;
             this.Shipper = shipper;
         }
 
-        public Employee(string firstName, string lastName, string identityCardNumber, DateTime birthDate, string email, 
+        public Employee(string firstName, string lastName, string identityCardNumber, DateTime birthDate, string email,
             string address, Phone cellPhone, Phone deskPhone, int salary, string degree, Shipper shipper, DateTime joinDate)
         {
             this.FirstName = firstName;
@@ -64,8 +64,8 @@ namespace FabricsFactoryMethodPattern.Entities
             this.BirthDate = birthDate;
             this.Email = email;
             this.Address = address;
-            this.CellPhones = new List<Phone> { cellPhone };
-            this.DeskPhones = new List<Phone> { deskPhone };
+            this.CellPhones = new List<Phone>() { cellPhone };
+            this.DeskPhones = new List<Phone>() { deskPhone };
             this.Salary = salary;
             this.Degree = degree;
             this.Shipper = shipper;

@@ -21,9 +21,9 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("total_roll")]
         public int TotalRoll { get; set; }
 
+        [BsonConstructor]
         public Goods() { }
 
-        [BsonConstructor]
         public Goods(ObjectId fabricsColorId, int totalMetter, int totalRoll)
         {
             this.FabricsColorId = fabricsColorId;

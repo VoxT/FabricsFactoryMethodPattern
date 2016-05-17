@@ -9,7 +9,7 @@ using FabricsFactoryMethodPattern.Entities;
 
 namespace FabricsFactoryMethodPattern.Services
 {
-    public abstract class PersonService<T> : EntityService<T>  where T : Person
+    public abstract class PersonService<T> : EntityService<T> where T : Person, IEntity
     {
         public void AddCellPhone(string id, Phone phone)
         {

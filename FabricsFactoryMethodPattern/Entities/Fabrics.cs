@@ -18,11 +18,11 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("description")]
         public string Description { get; set; }
 
+        [BsonConstructor]
         public Fabrics()
         {
         }
 
-        [BsonConstructor]
         public Fabrics(string name, string  description)
         {
             this.Name = name;

@@ -17,9 +17,9 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("account_number")]
         public string AccountNumber { get; set; }
 
+        [BsonConstructor]
         public Bank() { }
 
-        [BsonConstructor]
         public Bank(string bankName, string accountNumber)
         {
             BankName = bankName;

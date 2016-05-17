@@ -14,11 +14,11 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("driver_lincense_number")]
         public string DriverLincenseNumber { get; set; }
 
+        [BsonConstructor]
         public Shipper()
         {
         }
 
-        [BsonConstructor]
         public Shipper(string driveLincenseNumber)
         {
             this.DriverLincenseNumber = driveLincenseNumber;

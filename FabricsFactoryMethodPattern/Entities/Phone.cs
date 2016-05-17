@@ -15,6 +15,8 @@ namespace FabricsFactoryMethodPattern.Entities
         public string PhoneNumber { get; set; }
 
         [BsonConstructor]
+        public Phone() { }
+
         public Phone(string phoneNumber)
         {
             this.PhoneNumber = phoneNumber;

@@ -18,7 +18,7 @@ namespace FabricsFactoryMethodPattern.Services
 
         protected EntityService()
         {
-            Console.WriteLine(typeof(T).Name.ToLower() + "s");
+            // get collection of enitity
             Collection = this.DatabaseHandler.GetCollection<T>(typeof(T).Name.ToLower() + "s"); ;
         }
 
@@ -57,7 +57,6 @@ namespace FabricsFactoryMethodPattern.Services
         {
             var filter = new BsonDocument();
             var document = Collection.Find(filter).ToList();
-
             return document;
         }
 
@@ -70,5 +69,6 @@ namespace FabricsFactoryMethodPattern.Services
                 Collection.UpdateOne(filter, update);
             }
         }
+
     }
 }

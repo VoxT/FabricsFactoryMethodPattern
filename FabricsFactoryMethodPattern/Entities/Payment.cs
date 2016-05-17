@@ -14,7 +14,6 @@ namespace FabricsFactoryMethodPattern.Entities
 {
     public class Payment : Entity
     {
-
         [BsonElement("time")]
         public DateTime Time { get; set; }
 

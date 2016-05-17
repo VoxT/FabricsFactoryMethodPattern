@@ -20,11 +20,11 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("address")]
         public string Address { get; set; }
 
+        [BsonConstructor]
         public WareHouse()
         {
         }
 
-        [BsonConstructor]
         public WareHouse(string name, int areage, string address)
         {
             this.Name = name;

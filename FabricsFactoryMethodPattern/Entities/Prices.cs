@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MongoDB.Driver;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System.ComponentModel.DataAnnotations;
 
 namespace FabricsFactoryMethodPattern.Entities
 {
@@ -18,6 +19,9 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("time")]
         public DateTime Time { get; set; }
 
+        [Required(ErrorMessage = "Price is required")]
+        [Range(0.01, 100.00,
+            ErrorMessage = "Price must be between 0.01 and 100.00")]
         [BsonElement("price")]
         public int Price { get; set; }
 

@@ -11,7 +11,9 @@ namespace FabricsFactoryMethodPattern.Entities
 {
     public abstract class Invoice : Entity
     {
-
+        /// <summary>
+        /// time created invoice.
+        /// </summary>
         [BsonElement("time")]
         public DateTime Time { get; set; }
 
@@ -57,6 +59,16 @@ namespace FabricsFactoryMethodPattern.Entities
             this.DiscountPercent = discountPercent;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <param name="supplierId"></param>
+        /// <param name="purchaseOrderId"></param>
+        /// <param name="wareHouse"></param>
+        /// <param name="paymentMethod"></param>
+        /// <param name="discountPercent"></param>
+        /// <param name="time"></param>
         public PurchaseInvoice(ObjectId employeeId, ObjectId supplierId, ObjectId purchaseOrderId, ObjectId wareHouse, string paymentMethod, short discountPercent, DateTime time)
         {
             this.EmployeeId = employeeId;
@@ -76,9 +88,15 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("customer_id")]
         public ObjectId CustomerId { get; set; }
 
+        /// <summary>
+        /// order reference id for the invoice
+        /// </summary>
         [BsonElement("sales_order_id")]
         public ObjectId SalesOrderId { get; set; }
 
+        /// <summary>
+        /// list delivery for this invoice
+        /// </summary>
         [BsonElement("delivery")]
         public List<Delivery> Delivery { get; set; }
 
@@ -87,6 +105,15 @@ namespace FabricsFactoryMethodPattern.Entities
         {
         }
 
+        /// <summary>
+        /// Contructor created sales innvoice without set time, time is auto fill. 
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="salesOrderId"></param>
+        /// <param name="paymentMethod"></param>
+        /// <param name="discountPercent"></param>
+        /// <param name="delivery"></param>
         public SalesInvoice(ObjectId employeeId, ObjectId customerId, ObjectId salesOrderId, string paymentMethod, short discountPercent, Delivery delivery)
         {
             this.EmployeeId = employeeId;
@@ -97,6 +124,16 @@ namespace FabricsFactoryMethodPattern.Entities
             this.DiscountPercent = discountPercent;
         }
 
+        /// <summary>
+        /// Contructor created sales innvoice with set time.
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <param name="customerId"></param>
+        /// <param name="salesOrderId"></param>
+        /// <param name="paymentMethod"></param>
+        /// <param name="discountPercent"></param>
+        /// <param name="delivery"></param>
+        /// <param name="time"></param>
         public SalesInvoice(ObjectId employeeId, ObjectId customerId, ObjectId salesOrderId, string paymentMethod, short discountPercent, Delivery delivery, DateTime time)
         {
             this.EmployeeId = employeeId;

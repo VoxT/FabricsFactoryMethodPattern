@@ -7,14 +7,24 @@ using MongoDB.Driver;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
-public enum Status { canceled, delivering, done }
+/// <summary>
+/// status for purchase order
+/// </summary>
+public enum PurchaseOrderStatus { Delivering, Cempleted, Canceled }
+
+/// <summary>
+/// status for sales order
+/// </summary>
+public enum SalesOrderStatus { Waiting, InProcess, Completed, Canceled }
+
 
 namespace FabricsFactoryMethodPattern.Entities
 {
     public abstract class Order : Entity
     {
-        [BsonElement("status")]
-        public Status Status { get; set; }
+
+        [BsonElement("goods")]
+        public List<Goods> Goods { get; set; }
 
         [BsonElement("time")]
         public DateTime Time { get; set; }
@@ -31,26 +41,26 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("employee_id")]
         public ObjectId EmployeeId { get; set; }
 
-        [BsonElement("purchase_goods")]
-        public List<Goods> PurchaseGoods { get; set; }
+        [BsonElement("status")]
+        public PurchaseOrderStatus Status { get; set; }
 
         [BsonConstructor]
         public PurchaseOrder()
         {
-            PurchaseGoods = new List<Goods>();
+            this.Goods = new List<Goods>();
         }
 
-        public PurchaseOrder(ObjectId employeeId, List<Goods> purchaseGoods, Status status)
+        public PurchaseOrder(ObjectId employeeId, List<Goods> purchaseGoods, PurchaseOrderStatus status)
         {
             this.EmployeeId = employeeId;
-            this.PurchaseGoods = purchaseGoods;
+            this.Goods = purchaseGoods;
             this.Status = status;
         }
 
-        public PurchaseOrder(ObjectId employeeId, List<Goods> purchaseGoods, Status status, DateTime time)
+        public PurchaseOrder(ObjectId employeeId, List<Goods> purchaseGoods, PurchaseOrderStatus status, DateTime time)
         {
             this.EmployeeId = employeeId;
-            this.PurchaseGoods = purchaseGoods;
+            this.Goods = purchaseGoods;
             this.Status = status;
             this.Time = time;
         }
@@ -63,26 +73,26 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("customer_id")]
         public ObjectId CustomerId { get; set; }
 
-        [BsonElement("goods_sold")]
-        public List<Goods> GoodsSold { get; set; }
+        [BsonElement("status")]
+        public SalesOrderStatus Status { get; set; }
 
         [BsonConstructor]
         public SalesOrder()
         {
-            GoodsSold = new List<Goods>();
+            this.Goods = new List<Goods>();
         }
 
-        public SalesOrder(ObjectId customerId, List<Goods> goodsSold, Status status)
+        public SalesOrder(ObjectId customerId, List<Goods> goodsSold, SalesOrderStatus status)
         {
             this.CustomerId = customerId;
-            this.GoodsSold = goodsSold;
+            this.Goods = goodsSold;
             this.Status = status;
         }
 
-        public SalesOrder(ObjectId customerId, List<Goods> goodsSold, Status status, DateTime time)
+        public SalesOrder(ObjectId customerId, List<Goods> goodsSold, SalesOrderStatus status, DateTime time)
         {
             this.CustomerId = customerId;
-            this.GoodsSold = goodsSold;
+            this.Goods = goodsSold;
             this.Status = status;
             this.Time = time;
         }

@@ -9,6 +9,13 @@ namespace FabricsFactoryMethodPattern.Entities
 {
     public abstract class Person : Entity
     {
+
+        [BsonElement("cell_phone")]
+        public List<Phone> CellPhones { get; set; }
+
+        [BsonElement("desk_phone")]
+        public List<Phone> DeskPhones { get; set; }
+
         [BsonElement("first_name")]
         public string FirstName { get; set; }
 
@@ -20,12 +27,6 @@ namespace FabricsFactoryMethodPattern.Entities
 
         [BsonElement("address")]
         public string Address { get; set; }
-
-        [BsonElement("cell_phone")]
-        public List<Phone> CellPhones { get; set; }
-
-        [BsonElement("desk_phone")]
-        public List<Phone> DeskPhones { get; set; }
 
         public Person()
         {
