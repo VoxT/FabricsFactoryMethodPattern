@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 using MongoDB.Driver;
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using System.ComponentModel.DataAnnotations;
 
 namespace FabricsFactoryMethodPattern.Entities
 {
     public class Employee : Person
     {
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [BsonDateTimeOptions(DateOnly = true)]
         [BsonElement("birth_date")]
         public DateTime BirthDate { get; set; }
@@ -21,6 +24,8 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("salary")]
         public int Salary { get; set; }
 
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
         [BsonElement("join_date")]
         public DateTime JoinDate { get; set; }
 

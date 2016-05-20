@@ -39,6 +39,14 @@ namespace FabricsFactoryMethodPattern.Services
         public SalesOrderService()
         {
         }
+
+        public void UpdateStatus(string id, SalesOrderStatus status)
+        {
+            var filter = Builders<SalesOrder>.Filter.Eq(p => p.Id, ObjectId.Parse(id));
+            var update = Builders<SalesOrder>.Update.Set(p => p.Status, status);
+            this.Collection.UpdateOne(filter, update);
+        }
+
     }
 
     public class PurchaseOrderService : OrderService<PurchaseOrder>
@@ -46,6 +54,14 @@ namespace FabricsFactoryMethodPattern.Services
         public PurchaseOrderService()
         {
         }
+
+        public void UpdateStatus(string id, PurchaseOrderStatus status)
+        {
+            var filter = Builders<PurchaseOrder>.Filter.Eq(p => p.Id, ObjectId.Parse(id));
+            var update = Builders<PurchaseOrder>.Update.Set(p => p.Status, status);
+            this.Collection.UpdateOne(filter, update);
+        }
+
     }
 
 }
