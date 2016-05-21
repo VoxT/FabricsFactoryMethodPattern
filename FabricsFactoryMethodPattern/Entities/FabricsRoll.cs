@@ -15,8 +15,8 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("lenght")]
         public int Length { get; set; }
 
-        [BsonElement("fabrics_id")]
-        public ObjectId FabricsId { get; set; }
+        [BsonElement("fabrics_color_id")]
+        public ObjectId FabricsColorId { get; set; }
 
         [BsonElement("plots_id")]
         public ObjectId PlotsId { get; set; }
@@ -32,9 +32,9 @@ namespace FabricsFactoryMethodPattern.Entities
         }
 
         [BsonConstructor]
-        public FabricsRoll(ObjectId fabricsId, ObjectId plotsId, int lenght, ObjectId purchaseInvoice)
+        public FabricsRoll(ObjectId fabricsColorId, ObjectId plotsId, int lenght, ObjectId purchaseInvoice)
         {
-            this.FabricsId = fabricsId;
+            this.FabricsColorId = fabricsColorId;
             this.PlotsId = plotsId;
             this.Length = lenght;
             this.PurchaseInvoiceId = purchaseInvoice;

@@ -16,17 +16,16 @@ namespace FabricsFactoryMethodPattern.Services
     /// base class for invoice
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public abstract class InvoiceService<T> : EntityService<T> where T : IEntity
+    public abstract class InvoiceService<T> : EntityService<T> where T : Invoice
     {
-        public void UpdateStatus()
-        { 
-            
-        }
+        public abstract List<FabricsRoll> GetFabricsRoll(string id);
+
+        public abstract double GetTotalMoney(T entity);
     }
 
     /// <summary>
     /// class PurchaseInvoiceService.
-    /// provided API for a pủchase invoice.
+    /// provided API for a purchase invoice.
     /// </summary>
     public class PurchaseInvoiceService : InvoiceService<PurchaseInvoice>
     {
@@ -35,6 +34,29 @@ namespace FabricsFactoryMethodPattern.Services
         /// </summary>
         public PurchaseInvoiceService()
         {
+        }
+
+        public override List<FabricsRoll> GetFabricsRoll(string id)
+        {
+            FabricsRollService service = new FabricsRollService();
+            return service.GetFabricsRollForPurchaseInvoice(id);
+        }
+
+        public override double GetTotalMoney(PurchaseInvoice entity)
+        {
+            var fabricsRoll = this.GetFabricsRoll(entity.Id.ToString());
+
+            SupplierService supplierService = new SupplierService();
+            var prices = supplierService.GetById(entity.SupplierId.ToString()).Prices;
+
+            var totalMoney = 0;
+            foreach(var roll in fabricsRoll)
+            {
+                var fabricsColor = prices.Where(p => p.FabricsColorId == roll.FabricsColorId).FirstOrDefault();
+                totalMoney += roll.Length * fabricsColor.Price;
+            }
+
+            return totalMoney;
         }
     }
 
@@ -49,6 +71,17 @@ namespace FabricsFactoryMethodPattern.Services
         /// </summary>
         public SalesInvoiceService()
         {
+        }
+
+        public override List<FabricsRoll> GetFabricsRoll(string id)
+        {
+            FabricsRollService service = new FabricsRollService();
+            return service.GetFabricsRollForSalesInvoice(id);
+        }
+
+        public override double GetTotalMoney(SalesInvoice entity)
+        {
+            return 0;
         }
 
         /// <summary>

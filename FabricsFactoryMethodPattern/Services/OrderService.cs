@@ -40,6 +40,12 @@ namespace FabricsFactoryMethodPattern.Services
         {
         }
 
+        public override void Create(SalesOrder entity)
+        {
+            entity.Status = SalesOrderStatus.Waiting;
+            base.Create(entity);
+        }
+
         public void UpdateStatus(string id, SalesOrderStatus status)
         {
             var filter = Builders<SalesOrder>.Filter.Eq(p => p.Id, ObjectId.Parse(id));
@@ -53,6 +59,12 @@ namespace FabricsFactoryMethodPattern.Services
     {
         public PurchaseOrderService()
         {
+        }
+
+        public override void Create(PurchaseOrder entity)
+        {
+            entity.Status = PurchaseOrderStatus.Unconfimred;
+            base.Create(entity);
         }
 
         public void UpdateStatus(string id, PurchaseOrderStatus status)

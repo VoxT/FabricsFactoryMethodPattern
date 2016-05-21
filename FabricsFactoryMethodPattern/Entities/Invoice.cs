@@ -25,7 +25,7 @@ namespace FabricsFactoryMethodPattern.Entities
 
         [BsonElement("employee_id")]
         public ObjectId EmployeeId { get; set; }
-
+        
         public Invoice()
         {
             this.Time = DateTime.Now;

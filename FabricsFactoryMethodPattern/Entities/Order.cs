@@ -10,7 +10,7 @@ using MongoDB.Bson.Serialization.Attributes;
 /// <summary>
 /// status for purchase order
 /// </summary>
-public enum PurchaseOrderStatus { Delivering, Cempleted, Canceled }
+public enum PurchaseOrderStatus {Unconfimred, Delivering, Completed, Canceled }
 
 /// <summary>
 /// status for sales order

@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using MongoDB.Bson;
 using MongoDB.Driver;
-using MongoDB.Driver.Builders;
 
 namespace FabricsFactoryMethodPattern.Services
 {
@@ -36,10 +35,15 @@ namespace FabricsFactoryMethodPattern.Services
             Collection.InsertOne(entity);
             
         }
- 
+
+        public virtual void Create(List<T> entity)
+        {
+            this.Collection.InsertMany(entity);
+        }
+
         public virtual bool Delete(string id)
         {
-            var filter = Builders<T>.Filter.Eq("_id", ObjectId.Parse(id));
+            var filter = Builders<T>.Filter.Eq(p => p.Id, ObjectId.Parse(id));
             var result = Collection.DeleteOne(filter);
 
             return ( result.DeletedCount >= 1);
@@ -47,7 +51,7 @@ namespace FabricsFactoryMethodPattern.Services
  
         public virtual T GetById(string id)
         {
-            var filter = Builders<T>.Filter.Eq("_id", ObjectId.Parse(id));
+            var filter = Builders<T>.Filter.Eq(p => p.Id, ObjectId.Parse(id));
             var document = Collection.Find(filter).FirstOrDefault();
 
             return document;
@@ -62,7 +66,7 @@ namespace FabricsFactoryMethodPattern.Services
 
         public virtual void Update(T entity)
         {
-             var filter = Builders<T>.Filter.Eq("_id", entity.Id);
+             var filter = Builders<T>.Filter.Eq(p => p.Id, entity.Id);
             foreach (var result in entity.ToBsonDocument<T>())
             {
                 var update = Builders<T>.Update.Set(result.Name, result.Value);
