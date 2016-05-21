@@ -36,6 +36,12 @@ namespace FabricsFactoryMethodPattern.Services
         {
         }
 
+        public List<PurchaseInvoice> GetInvoiceForSupplier(string id)
+        {
+            var filter = Builders<PurchaseInvoice>.Filter.Eq(p => p.SupplierId, ObjectId.Parse(id));
+            return this.Collection.Find(filter).ToList();
+        }
+
         public override List<FabricsRoll> GetFabricsRoll(string id)
         {
             FabricsRollService service = new FabricsRollService();
@@ -73,6 +79,12 @@ namespace FabricsFactoryMethodPattern.Services
         {
         }
 
+        public List<SalesInvoice> GetInvoiceForCustomer(string id)
+        {
+            var filter = Builders<SalesInvoice>.Filter.Eq(p => p.CustomerId, ObjectId.Parse(id));
+            return this.Collection.Find(filter).ToList();
+        }
+
         public override List<FabricsRoll> GetFabricsRoll(string id)
         {
             FabricsRollService service = new FabricsRollService();
@@ -81,7 +93,19 @@ namespace FabricsFactoryMethodPattern.Services
 
         public override double GetTotalMoney(SalesInvoice entity)
         {
-            return 0;
+            var fabricsRoll = this.GetFabricsRoll(entity.Id.ToString());
+
+            CustomerService supplierService = new CustomerService();
+            var prices = supplierService.GetById(entity.CustomerId.ToString()).Prices;
+
+            var totalMoney = 0;
+            foreach (var roll in fabricsRoll)
+            {
+                var fabricsColor = prices.Where(p => p.FabricsColorId == roll.FabricsColorId).FirstOrDefault();
+                totalMoney += roll.Length * fabricsColor.Price;
+            }
+
+            return totalMoney;
         }
 
         /// <summary>
