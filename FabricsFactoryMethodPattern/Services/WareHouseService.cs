@@ -28,7 +28,14 @@ namespace FabricsFactoryMethodPattern.Services
             return listFabricsRoll.ToList();
         }
 
+        public List<FabricsRoll> GetRemainFabricsRoll(string idWareHouse)
+        {
+            var listPurchaseRoll = this.GetFabricsRoll(idWareHouse);
 
+            List<FabricsRoll> listRemainFabricsRoll = listPurchaseRoll.Where(p => p.SalesInvoiceId == null).ToList();
+
+            return listRemainFabricsRoll;
+        }
 
     }
 }

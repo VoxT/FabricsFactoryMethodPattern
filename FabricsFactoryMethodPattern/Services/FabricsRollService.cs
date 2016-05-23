@@ -57,5 +57,17 @@ namespace FabricsFactoryMethodPattern.Services
             return result;
         }
 
+
+        public List<FabricsRoll> GetFabricsRollForFabricsColor(string fabricsColorId)
+        {
+            var filter = Builders<FabricsRoll>.Filter.Eq(p => p.FabricsColorId, ObjectId.Parse(fabricsColorId));
+            return this.Collection.Find(filter).ToList();
+        }
+
+        public List<FabricsRoll> GetFabricsRollForFabricsPlots(string plotsId)
+        {
+            var filter = Builders<FabricsRoll>.Filter.Eq(p => p.PlotsId, ObjectId.Parse(plotsId));
+            return this.Collection.Find(filter).ToList();
+        }
     }
 }
