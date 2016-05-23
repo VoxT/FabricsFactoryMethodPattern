@@ -21,12 +21,6 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("note")]
         public string Note { get; set; }
 
-        [BsonElement("purchase_invoice_id")]
-        public ObjectId PurchaseInvoiceId { get; set; }
-
-        [BsonElement("sales_invoice_id")]
-        public ObjectId SalesInvoiceId { get; set; }
-
         [BsonElement("payment_id")]
         public ObjectId PaymentId { get; set; }
 
@@ -35,19 +29,5 @@ namespace FabricsFactoryMethodPattern.Entities
         {
             Time = DateTime.Now;
         }
-
-        public Record(double money, string note)
-        {
-            this.Monney = money;
-            this.Note = note;
-        }
-
-        public Record(double money, string note, DateTime time)
-        {
-            this.Monney = money;
-            this.Note = note;
-            this.Time = time;
-        }
-
     }
 }

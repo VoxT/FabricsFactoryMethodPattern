@@ -32,6 +32,13 @@ namespace FabricsFactoryMethodPattern.Services
 
         }
 
+        public List<T> GetOrderByDate(DateTime fromDate, DateTime toDate)
+        {
+            var filterBuilder = Builders<T>.Filter;
+            var filter = filterBuilder.Gt(p => p.Time, fromDate) & filterBuilder.Lt(p => p.Time, toDate);
+            return this.Collection.Find(filter).ToList();
+        }
+
     }
 
     public class SalesOrderService : OrderService<SalesOrder>

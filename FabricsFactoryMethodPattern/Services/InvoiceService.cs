@@ -21,6 +21,13 @@ namespace FabricsFactoryMethodPattern.Services
         public abstract List<FabricsRoll> GetFabricsRoll(string id);
 
         public abstract double GetTotalMoney(T entity);
+
+        public List<T> GetInvoiceByDate(DateTime fromDate, DateTime toDate)
+        {
+            var filterBuilder = Builders<T>.Filter;
+            var filter = filterBuilder.Gt(p => p.Time, fromDate) & filterBuilder.Lt(p => p.Time, toDate);
+            return this.Collection.Find(filter).ToList();
+        }
     }
 
     /// <summary>
@@ -34,6 +41,12 @@ namespace FabricsFactoryMethodPattern.Services
         /// </summary>
         public PurchaseInvoiceService()
         {
+        }
+
+        public List<PurchaseInvoice> GetInvoiceForWareHouse(string id)
+        {
+            var filter = Builders<PurchaseInvoice>.Filter.Eq(p => p.WareHouseId, ObjectId.Parse(id));
+            return this.Collection.Find(filter).ToList();
         }
 
         public List<PurchaseInvoice> GetInvoiceForSupplier(string id)
