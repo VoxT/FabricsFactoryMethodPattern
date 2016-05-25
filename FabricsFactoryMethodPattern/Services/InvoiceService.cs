@@ -68,7 +68,11 @@ namespace FabricsFactoryMethodPattern.Services
             SupplierService supplierService = new SupplierService();
             var prices = supplierService.GetById(entity.SupplierId.ToString()).Prices;
 
-            var totalMoney = 0;
+            if (prices == null)
+                return -1.0;
+
+            double totalMoney = 0;
+
             foreach(var roll in fabricsRoll)
             {
                 var fabricsColor = prices.Where(p => p.FabricsColorId == roll.FabricsColorId).FirstOrDefault();
@@ -111,7 +115,10 @@ namespace FabricsFactoryMethodPattern.Services
             CustomerService supplierService = new CustomerService();
             var prices = supplierService.GetById(entity.CustomerId.ToString()).Prices;
 
-            var totalMoney = 0;
+            if (prices == null)
+                return -1.0;
+
+            double totalMoney = 0;
             foreach (var roll in fabricsRoll)
             {
                 var fabricsColor = prices.Where(p => p.FabricsColorId == roll.FabricsColorId).FirstOrDefault();
