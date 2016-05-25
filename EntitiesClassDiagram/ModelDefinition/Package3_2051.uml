@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="91f328e1-ed34-4054-b4a2-5939c15357c2"
+  name="Bson"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="c5a34f23-9610-4b1d-b2e9-8bbc81c30524"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DMongoDB.Bson"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="daeb6fc5-951a-4591-9800-efeb0dcd4942"
+        name="ObjectId"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="45d9fa62-e5a9-4a8d-9891-5ce168629338"
+            handle="viewcode://./CodeSchema_Struct?Assembly%3Dfile:%2F%2F%2FF:%2FGoogleDrive%2Fcode%2Fdll%2FMongoDB.Bson.dll Namespace%3DMongoDB.Bson Type%3DObjectId"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="e0e63446-944b-4f2c-84e5-804a16debb40"
+            name="struct"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="92f452d8-a6a5-4034-b239-31bafcd15e3b">
+                <propertyInstance
+                  Id="4884633f-74e8-4d84-a59f-315e4b782fc4"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2852584c-c7ce-4a66-8166-7863cf9ec0d8">
+                <propertyInstance
+                  Id="f23e4724-c259-4cd2-a637-f45a2e579361"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1a277f71-93b6-4e00-a71d-f371b8926306">
+                <propertyInstance
+                  Id="4dc6c04b-499c-44dd-a768-ddd9a0ac63cf"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0ed18002-9469-465d-ae1c-69e992d31e89">
+                <propertyInstance
+                  Id="1750b755-2e4b-4aba-b816-fff1f5bef1ab"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

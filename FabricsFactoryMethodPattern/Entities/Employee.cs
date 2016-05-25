@@ -44,38 +44,5 @@ namespace FabricsFactoryMethodPattern.Entities
             this.JoinDate = DateTime.Now;
         }
         
-        public Employee(string firstName, string lastName, string identityCardNumber, DateTime birthDate, string email, 
-            string address, Phone cellPhone, Phone deskPhone, int salary, string degree, Shipper shipper)
-        {
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.IdentityCardNumber = identityCardNumber;
-            this.BirthDate = birthDate;
-            this.Email = email;
-            this.Address = address;
-            this.CellPhones = new List<Phone>() { cellPhone };
-            this.DeskPhones = new List<Phone>() { deskPhone };
-            this.Salary = salary;
-            this.Degree = degree;
-            this.Shipper = shipper;
-        }
-
-        public Employee(string firstName, string lastName, string identityCardNumber, DateTime birthDate, string email,
-            string address, Phone cellPhone, Phone deskPhone, int salary, string degree, Shipper shipper, DateTime joinDate)
-        {
-            this.FirstName = firstName;
-            this.LastName = lastName;
-            this.IdentityCardNumber = identityCardNumber;
-            this.BirthDate = birthDate;
-            this.Email = email;
-            this.Address = address;
-            this.CellPhones = new List<Phone>() { cellPhone };
-            this.DeskPhones = new List<Phone>() { deskPhone };
-            this.Salary = salary;
-            this.Degree = degree;
-            this.Shipper = shipper;
-            this.JoinDate = joinDate;
-        }
-
     }
 }

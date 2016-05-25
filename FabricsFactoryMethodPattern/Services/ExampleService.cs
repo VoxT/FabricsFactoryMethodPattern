@@ -7,10 +7,4 @@ using System.Threading.Tasks;
 namespace FabricsFactoryMethodPattern.Services
 {
     using Entities;
-    public class ExampleService : EntityService<Example>
-    {
-        public ExampleService()
-        {
-        }
-    }
 }

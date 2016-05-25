@@ -50,53 +50,5 @@ namespace FabricsFactoryMethodPattern.Entities
             this.Time = DateTime.Now;
         }
 
-        public Payment(ObjectId employeeId, PaymentType paymentType, string recipientOrSender, PaymentMethod paymentMethod, string bankName, string accountNumber, double money, ObjectId customerIdOrSupplierId)
-        {
-            this.PaymentType = paymentType;
-
-            switch (paymentType)
-            {
-                // revenues payment (reciept)
-                case PaymentType.revenues: this.CustomerId = customerIdOrSupplierId; break;
-
-                // expenditures payment (pay)
-                case PaymentType.expenditures: this.SupplierId = customerIdOrSupplierId; break;
-
-                // ------
-                default: break;
-            }
-
-            this.EmployeeId = employeeId;
-            this.RecipientOrSender = recipientOrSender;
-            this.PaymentMethod = paymentMethod;
-            this.BankName = bankName;
-            this.AccountNumber = accountNumber;
-            this.Money = money;
-        }
-
-        public Payment(ObjectId employeeId, PaymentType paymentType, string recipientOrSender, PaymentMethod paymentMethod, string bankName, string accountNumber, double money, ObjectId customerIdOrSupplierId, DateTime time)
-        {
-            this.PaymentType = paymentType;
-
-            switch (paymentType)
-            {
-                // revenues payment (reciept)
-                case PaymentType.revenues: this.CustomerId = customerIdOrSupplierId; break;
-
-                // expenditures payment (pay)
-                case PaymentType.expenditures: this.SupplierId = customerIdOrSupplierId; break;
-
-                // ------
-                default: break;
-            }
-
-            this.EmployeeId = employeeId;
-            this.RecipientOrSender = recipientOrSender;
-            this.PaymentMethod = paymentMethod;
-            this.BankName = bankName;
-            this.AccountNumber = accountNumber;
-            this.Money = money;
-            this.Time = time;
-        }
     }
 }

@@ -61,11 +61,9 @@
     <Compile Include="Entities\Employee.cs" />
     <Compile Include="Entities\Entity.cs" />
     <Compile Include="Entities\IEntity.cs" />
-    <Compile Include="Entities\Example.cs" />
     <Compile Include="Entities\FabricsColor.cs" />
     <Compile Include="Entities\FabricsRoll.cs" />
     <Compile Include="Entities\Fabrics.cs" />
-    <Compile Include="GenericFactory.cs" />
     <Compile Include="Entities\Goods.cs" />
     <Compile Include="Entities\GoodsReturn.cs" />
     <Compile Include="Entities\Invoice.cs" />
@@ -98,7 +96,9 @@
     <Compile Include="Services\SupplierService.cs" />
     <Compile Include="Services\WareHouseService.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

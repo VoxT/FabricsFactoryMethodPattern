@@ -49,37 +49,6 @@ namespace FabricsFactoryMethodPattern.Entities
         {
         }
 
-        public PurchaseInvoice(ObjectId employeeId, ObjectId supplierId, ObjectId purchaseOrderId, ObjectId wareHouse, string paymentMethod, short discountPercent)
-        {
-            this.EmployeeId = employeeId;
-            this.SupplierId = supplierId;
-            this.PurchaseOrderId = purchaseOrderId;
-            this.WareHouseId = wareHouse;
-            this.PaymentMethod = paymentMethod;
-            this.DiscountPercent = discountPercent;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="employeeId"></param>
-        /// <param name="supplierId"></param>
-        /// <param name="purchaseOrderId"></param>
-        /// <param name="wareHouse"></param>
-        /// <param name="paymentMethod"></param>
-        /// <param name="discountPercent"></param>
-        /// <param name="time"></param>
-        public PurchaseInvoice(ObjectId employeeId, ObjectId supplierId, ObjectId purchaseOrderId, ObjectId wareHouse, string paymentMethod, short discountPercent, DateTime time)
-        {
-            this.EmployeeId = employeeId;
-            this.SupplierId = supplierId;
-            this.PurchaseOrderId = purchaseOrderId;
-            this.WareHouseId = wareHouse;
-            this.PaymentMethod = paymentMethod;
-            this.DiscountPercent = discountPercent;
-            this.Time = time;
-        }
-
     }
 
     public class SalesInvoice : Invoice
@@ -103,46 +72,6 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonConstructor]
         public SalesInvoice()
         {
-        }
-
-        /// <summary>
-        /// Contructor created sales innvoice without set time, time is auto fill. 
-        /// </summary>
-        /// <param name="employeeId"></param>
-        /// <param name="customerId"></param>
-        /// <param name="salesOrderId"></param>
-        /// <param name="paymentMethod"></param>
-        /// <param name="discountPercent"></param>
-        /// <param name="delivery"></param>
-        public SalesInvoice(ObjectId employeeId, ObjectId customerId, ObjectId salesOrderId, string paymentMethod, short discountPercent, Delivery delivery)
-        {
-            this.EmployeeId = employeeId;
-            this.CustomerId = customerId;
-            this.SalesOrderId = salesOrderId;
-            this.Delivery = new List<Delivery>{ delivery };
-            this.PaymentMethod = paymentMethod;
-            this.DiscountPercent = discountPercent;
-        }
-
-        /// <summary>
-        /// Contructor created sales innvoice with set time.
-        /// </summary>
-        /// <param name="employeeId"></param>
-        /// <param name="customerId"></param>
-        /// <param name="salesOrderId"></param>
-        /// <param name="paymentMethod"></param>
-        /// <param name="discountPercent"></param>
-        /// <param name="delivery"></param>
-        /// <param name="time"></param>
-        public SalesInvoice(ObjectId employeeId, ObjectId customerId, ObjectId salesOrderId, string paymentMethod, short discountPercent, Delivery delivery, DateTime time)
-        {
-            this.EmployeeId = employeeId;
-            this.CustomerId = customerId;
-            this.SalesOrderId = salesOrderId;
-            this.Delivery = new List<Delivery>{ delivery };
-            this.PaymentMethod = paymentMethod;
-            this.DiscountPercent = discountPercent;
-            this.Time = time;
         }
 
     }

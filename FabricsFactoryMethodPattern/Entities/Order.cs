@@ -50,21 +50,6 @@ namespace FabricsFactoryMethodPattern.Entities
             this.Goods = new List<Goods>();
         }
 
-        public PurchaseOrder(ObjectId employeeId, List<Goods> purchaseGoods, PurchaseOrderStatus status)
-        {
-            this.EmployeeId = employeeId;
-            this.Goods = purchaseGoods;
-            this.Status = status;
-        }
-
-        public PurchaseOrder(ObjectId employeeId, List<Goods> purchaseGoods, PurchaseOrderStatus status, DateTime time)
-        {
-            this.EmployeeId = employeeId;
-            this.Goods = purchaseGoods;
-            this.Status = status;
-            this.Time = time;
-        }
-
     }
 
     public class SalesOrder : Order
@@ -80,21 +65,6 @@ namespace FabricsFactoryMethodPattern.Entities
         public SalesOrder()
         {
             this.Goods = new List<Goods>();
-        }
-
-        public SalesOrder(ObjectId customerId, List<Goods> goodsSold, SalesOrderStatus status)
-        {
-            this.CustomerId = customerId;
-            this.Goods = goodsSold;
-            this.Status = status;
-        }
-
-        public SalesOrder(ObjectId customerId, List<Goods> goodsSold, SalesOrderStatus status, DateTime time)
-        {
-            this.CustomerId = customerId;
-            this.Goods = goodsSold;
-            this.Status = status;
-            this.Time = time;
         }
 
     }

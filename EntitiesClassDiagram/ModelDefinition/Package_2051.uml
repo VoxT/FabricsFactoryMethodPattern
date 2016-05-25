@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="b4b70011-4fb4-41f2-a4d1-a26a87eb3e21"
+  name="FabricsFactoryMethodPattern"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="907396e6-45b7-4ee1-916e-8efabf85eebd"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DFabricsFactoryMethodPattern"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d4556492-1ecc-4ceb-bc41-ea433cc30872"
+        LastKnownName="Entities"
+        LastKnownLocation="Package1_2051.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="4c97dfef-926c-4ee4-992e-9768b28782d8"
+        LastKnownName="Services"
+        LastKnownLocation="Package_2142.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

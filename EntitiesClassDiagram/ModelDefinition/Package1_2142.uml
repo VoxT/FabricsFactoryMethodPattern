@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="ce5408a5-8921-44ad-b0ae-b82e2b62af35"
+  name="Driver"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="79b39ed8-4b74-4ece-925e-c9b394560d6f"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DMongoDB.Driver"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="5fb2f248-32e4-4777-94dc-0e7a6f30119c"
+        name="IMongoCollection&lt;T‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8679e19a-c254-4252-bcc1-98fd542c1da6"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f0f5998d-8020-4bc0-a62b-9c2fd610cda6">
+                <propertyInstance
+                  Id="b63f5e73-d5ba-48b6-b910-63596b143762"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="95048a22-ed13-408a-adc4-bfa8dfd5f02f">
+                <propertyInstance
+                  Id="909a1391-fd41-4e88-bee9-7ba240a7209e"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="91d46543-3041-421b-b062-ca264ddb2e2b">
+                <propertyInstance
+                  Id="6ef6a13a-8a6e-40df-9dba-96b8cafcb6d6"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="254fb65f-5416-40a8-90b7-54c5004d38ac">
+                <propertyInstance
+                  Id="963b3fe0-d758-4d87-88b5-27429d6d7d0f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="1d7852a5-6c33-4e0b-aaf2-edf6cdb784ae">
+            <redefinableTemplateSignatureMoniker
+              Id="2e7b2852-d9d0-4462-9509-3c7a8ade1ffb"
+              LastKnownLocation="Package1_2142.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="aa350bef-1012-4211-ba66-4a30efc9d09d">
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="fcfdff44-5019-4aa7-88cb-cd4752dd89f6"
+                      LastKnownLocation="Package1_2142.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="be229f99-8811-40a6-84fe-5b3cee07b030"
+        name="IMongoCollection"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="76f7bc3f-9acf-41b6-a23d-547503de0dfe"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FF:%2FGoogleDrive%2Fcode%2Fdll%2FMongoDB.Driver.dll Namespace%3DMongoDB.Driver Type%3D(Name%3DIMongoCollection GenericParameterCount%3D1)"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="88a17673-187e-4f6d-93ba-c17422c5d22a"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="1c35fd17-8bbe-459e-a2fa-52ac0d2bdb94">
+                <propertyInstance
+                  Id="de507de8-1b78-4370-b516-1018af2e8825"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="043e94e0-a578-4c3f-83dd-470c0f875d99">
+                <propertyInstance
+                  Id="4a480c6c-2576-48f2-95d9-592bcacebe38"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="338b4bb8-932a-4ffd-a4bf-53b89a2251c2">
+                <propertyInstance
+                  Id="39adca5a-02d1-40ea-94f3-bec26ff72916"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="94457fe5-ebf8-4da7-a17f-2e33a7bc8fd8">
+                <propertyInstance
+                  Id="491362aa-2423-4bf0-a438-5b96c792fb01"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="2e7b2852-d9d0-4462-9509-3c7a8ade1ffb"
+            parameters=""
+            name="RedefinableTemplateSignature1"
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="fcfdff44-5019-4aa7-88cb-cd4752dd89f6">
+                <referencesInternal>
+                  <reference
+                    Id="ee40a140-904b-42d1-af48-de0dd0104f59"
+                    handle="viewcode://./CodeSchema_GenericParameter?Assembly%3Dfile:%2F%2F%2FF:%2FGoogleDrive%2Fcode%2Fdll%2FMongoDB.Driver.dll Namespace%3DMongoDB.Driver Type%3D(Name%3DIMongoCollection GenericParameterCount%3D1) ParameterIdentifier%3D0"
+                    tag="ViewCode" />
+                </referencesInternal>
+                <ownedParameterableElement>
+                  <class
+                    Id="b0bf93f9-0c19-4ab1-af3c-4fca31051faf"
+                    name="TDocument"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="5b0a0eb4-95bd-4538-b580-920916b9b0c4"
+        name="IMongoDatabase"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="f11f93b7-c483-47b6-8a32-a33afaf2e826"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FF:%2FGoogleDrive%2Fcode%2Fdll%2FMongoDB.Driver.dll Namespace%3DMongoDB.Driver Type%3DIMongoDatabase"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="9cc1afd9-d808-4020-b9be-b8e276983132"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="78c5f22a-8a23-4b68-803d-99124dd777a5">
+                <propertyInstance
+                  Id="100be9a2-677c-4532-acb9-a35b18280ab7"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="176f9848-6115-4c83-9098-57957ea090a6">
+                <propertyInstance
+                  Id="61d0dc38-0af2-4991-9806-6833d75465db"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ffd09831-2313-4014-9d03-185423ffa73c">
+                <propertyInstance
+                  Id="eb851349-4108-4170-8c5a-9d47dc42af6d"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cfbedd1f-c695-4aa3-98ce-4afb02f84879">
+                <propertyInstance
+                  Id="3a022396-4bda-4a19-8c45-0dccea0ca180"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="4b741ce0-6adf-472a-acc6-3571f44682a5"
+        name="MongoClient"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="f650c670-cafa-4437-9df8-fc4a8a51b750"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FF:%2FGoogleDrive%2Fcode%2Fdll%2FMongoDB.Driver.dll Namespace%3DMongoDB.Driver Type%3DMongoClient"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="ffcaf808-5817-4c2b-a072-6d17a0e71a74"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="96c01ea0-eba5-48f1-8676-e429d0684b7d">
+                <propertyInstance
+                  Id="02ff7b26-7c77-490a-a58b-09071b7d1948"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2512ff0f-1649-400a-a258-368355473c2b">
+                <propertyInstance
+                  Id="846b43db-febf-4e3f-aad2-6091cd760d11"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="126adb3c-b2a3-4368-a3b0-bf7452724f85">
+                <propertyInstance
+                  Id="8973c806-2931-4c1f-87bb-6f7d1107d59a"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="412f6405-d93d-4997-82c9-3d003c0ac8cc">
+                <propertyInstance
+                  Id="5663e9d3-1e59-45df-a5c3-1504f86837c0"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fb466f9e-1b77-4c80-be4e-b92c0dd81a7d">
+                <propertyInstance
+                  Id="482193bc-dcd1-41f5-bf34-a5d37cb57ce9"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="ef147798-8647-4111-87f6-67e178810c9f"
+        name="IMongoCollection&lt;T‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="a58770b5-f829-44ad-a4cc-9e2d0b0d1d19"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ff61c74d-2e72-4e19-8cd4-031983fb3d52">
+                <propertyInstance
+                  Id="75513522-0598-451d-b452-60ac65872336"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a572493e-0015-43bd-a7d6-a8d060f6e8b5">
+                <propertyInstance
+                  Id="80df5c61-2f9b-4394-9375-b135fc192efe"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6d18a7cd-b952-41cf-b148-d4d8e3733d1f">
+                <propertyInstance
+                  Id="7e88fc25-638e-4b7d-b22d-7fda15bf86d0"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="701aa7ef-cd17-4835-bec6-756a709ca5f4">
+                <propertyInstance
+                  Id="7333e817-9ccc-47d6-b6f5-78c345f1be5d"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="1af53e49-3977-4a49-928d-5fe0d557e082">
+            <redefinableTemplateSignatureMoniker
+              Id="2e7b2852-d9d0-4462-9509-3c7a8ade1ffb"
+              LastKnownLocation="Package1_2142.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="c9663932-b165-4e4e-b458-9d92f0adf2c0">
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="fcfdff44-5019-4aa7-88cb-cd4752dd89f6"
+                      LastKnownLocation="Package1_2142.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="d9e4ccd4-917a-4a3a-88c2-b808869bb428"
+        name="IMongoCollection&lt;T‎&gt;"
+        isAbstract="false"
+        isLeaf="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b5b7a825-f76f-479f-8c21-c2e9ccc983c6"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b3ee982c-9b66-4447-b041-503e0b8dd6d5">
+                <propertyInstance
+                  Id="b0f5c88c-ff55-44cc-822c-141d10dc7fb8"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7fdae273-4d82-4b80-a61d-b1445e72c342">
+                <propertyInstance
+                  Id="5ae577bd-8134-4185-bfbf-78cbd8f8f2c5"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fd2ffd0b-65fd-41c9-8dfd-c690d32ae3a5">
+                <propertyInstance
+                  Id="7cde42b6-6100-4e81-bc83-8f196c219cff"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="3d57b135-32c9-4abd-93a3-c569a98a55a3">
+                <propertyInstance
+                  Id="77875754-f600-4a3a-8759-298270951b78"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <signatures>
+          <templateBinding
+            Id="de3ead49-e4ca-4bd6-8698-7c36c3b5008c">
+            <redefinableTemplateSignatureMoniker
+              Id="2e7b2852-d9d0-4462-9509-3c7a8ade1ffb"
+              LastKnownLocation="Package1_2142.uml" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution
+                  Id="97064ed7-3831-4c3a-b3cb-fbca3485416d">
+                  <actuals>
+                    <undefinedTypeMoniker
+                      Id="fd061be2-4a42-45c2-88b0-b6a6d3459826"
+                      LastKnownName="T"
+                      LastKnownLocation="Package1_2142.uml" />
+                  </actuals>
+                  <formal>
+                    <classifierTemplateParameterMoniker
+                      Id="fcfdff44-5019-4aa7-88cb-cd4752dd89f6"
+                      LastKnownLocation="Package1_2142.uml" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+          </templateBinding>
+        </signatures>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="fd061be2-4a42-45c2-88b0-b6a6d3459826"
+        name="T" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
