@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="d4556492-1ecc-4ceb-bc41-ea433cc30872"
   name="Entities"
@@ -1242,72 +1242,6 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
-          <association
-            Id="22fe3fa3-0685-4b07-beb2-b28650a85238"
-            isDerived="false"
-            sourceEndRoleName="Employee"
-            targetEndRoleName="Shipper"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="eab08e5f-9645-4fe1-9c23-435d49fe5d48"
-              LastKnownName="Shipper"
-              LastKnownLocation="Package1_2051.uml" />
-            <description>Property Shipper references type Shipper.</description>
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="2302094a-a70f-4683-9e4b-5f33b3c366c8"
-                  name="Employee"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="df34cb8f-541f-4378-a0a5-31917779cf3c"
-                      name="Lower"
-                      value="*" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="da66fe49-95cb-4325-ba5b-8f6f230440f3"
-                      name="Upper"
-                      value="*" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="8ef7c1ca-048c-456a-a9bc-56e58ed7fb29"
-                  name="Shipper"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="f847de6f-c7ab-487a-b3a3-a964f65f907a"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="5cb3a9b9-af31-4271-a59c-c0df10a19446"
-                      name="Upper"
-                      value="1" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
         </targetEnds>
         <ownedAttributesInternal>
           <property
@@ -1791,8 +1725,8 @@
             </type_NamedElement>
           </property>
           <property
-            Id="910358c0-4812-4e25-8fb0-55280329d8b4"
-            name="Shipper"
+            Id="9ae9828a-6e0a-41f5-a262-f0c4c84cc1e2"
+            name="DriverLincenseNumber"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -1802,61 +1736,61 @@
             isComposite="false">
             <referencesInternal>
               <reference
-                Id="4bb3550c-ba10-4dc6-b182-0391e351327b"
-                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FF:%2FGoogleDrive%2Fcode%2FFabricsFactoryMethodPattern%2FFabricsFactoryMethodPattern%2Fbin%2FDebug%2FFabricsFactoryMethodPattern.dll Namespace%3DFabricsFactoryMethodPattern.Entities Type%3DEmployee Member%3DShipper"
+                Id="447263fe-5945-44af-bf61-ee552e5b5e37"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FF:%2FGoogleDrive%2Fcode%2FFabricsFactoryMethodPattern%2FFabricsFactoryMethodPattern%2Fbin%2FDebug%2FFabricsFactoryMethodPattern.dll Namespace%3DFabricsFactoryMethodPattern.Entities Type%3DEmployee Member%3DDriverLincenseNumber"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="396567b8-2d0b-4274-949f-5e503d3638a0"
+                Id="bdbed67c-a100-4b2b-a82c-116557655439"
                 name="property"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="f89fe70b-103f-4138-814d-753a8ea8aca3">
+                    Id="13435c41-13df-49fd-9f41-1483770957ba">
                     <propertyInstance
-                      Id="388bd7ca-f111-4fc8-b48e-fa46fcb52b31"
+                      Id="16ab0c7f-0a9a-474b-8df9-1541fef74a6b"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="b5cb70ab-5cf0-4a26-8096-e2a5f8a010db">
+                    Id="e7f91919-aee2-4a5c-aae7-69155b38396f">
                     <propertyInstance
-                      Id="39ec5e86-1780-443a-8ea5-7fb5dc7b9f21"
+                      Id="d3317dee-96f4-42cb-9105-59b3561723a8"
                       name="Get"
                       value="public" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="b1de9156-7d61-46d4-aced-a81d86e651d2">
+                    Id="7799b2e6-ba6c-4d9b-b25f-70b091212d0f">
                     <propertyInstance
-                      Id="b9811eea-6f22-4a41-b971-f574d64ef314"
+                      Id="e3d253cb-716e-4c93-9b21-7bd983f7587a"
                       name="HasBody"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="a6c80764-db27-40b5-a0ee-c534349ca1ed">
+                    Id="aaab4194-42c8-49d0-b4bb-ffb815fc5284">
                     <propertyInstance
-                      Id="feff0633-7533-4e4d-b33d-6fd3c05dd51e"
+                      Id="531df035-f694-4678-888a-7c83e2c469ef"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="2f5a8a29-1989-41a2-a827-b5828fe6c6a5">
+                    Id="ccf5c8aa-6fb5-4c2a-89d5-36196d08984f">
                     <propertyInstance
-                      Id="40e2d6af-c7d2-46c7-9e8a-fde025b62e0d"
+                      Id="e4413b15-067b-4c6b-a1a3-ffd708ff7f75"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="88cb4340-ebd1-4b08-abac-1a7c449c0d95">
+                    Id="8036c180-d839-4276-831e-9e1cacf4f93c">
                     <propertyInstance
-                      Id="b9cabc62-ccb9-4bd6-9e52-036240841a40"
+                      Id="5bffb903-f808-4c9b-bf70-633fdb30c88b"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="89973d92-a164-4375-8fb3-5e3f35037ee1">
+                    Id="331c6a53-e770-41ef-82b1-6e5d59353199">
                     <propertyInstance
-                      Id="475a66ca-6d01-4de5-8a25-327a18e36603"
+                      Id="f700438f-cf50-4de8-b33a-32e957ef58b2"
                       name="Set"
                       value="public" />
                   </stereotypeInstanceHasPropertyInstances>
@@ -1864,16 +1798,16 @@
               </stereotypeInstance>
             </appliedStereotypesInternal>
             <type_NamedElement>
-              <classMoniker
-                Id="eab08e5f-9645-4fe1-9c23-435d49fe5d48"
-                LastKnownName="Shipper"
-                LastKnownLocation="Package1_2051.uml" />
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="EntitiesClassDiagram.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
         <ownedOperationsInternal>
           <operation
-            Id="e9bd810b-196a-42bf-b7c0-1516856c7e18"
+            Id="d386d5bb-f374-4117-bb8e-68a6330ecaaf"
             name="Employee"
             isLeaf="false"
             isStatic="false"
@@ -1882,54 +1816,54 @@
             isQuery="false">
             <referencesInternal>
               <reference
-                Id="f52d222a-e5df-4466-9644-d165dc041b7c"
+                Id="4dd4bcce-546b-4799-88b3-035408a6f628"
                 handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FF:%2FGoogleDrive%2Fcode%2FFabricsFactoryMethodPattern%2FFabricsFactoryMethodPattern%2Fbin%2FDebug%2FFabricsFactoryMethodPattern.dll Namespace%3DFabricsFactoryMethodPattern.Entities Type%3DEmployee Member%3D.ctor"
                 tag="ViewCode" />
             </referencesInternal>
             <appliedStereotypesInternal>
               <stereotypeInstance
-                Id="bd14d83f-9908-4664-89b6-ac55da097c09"
+                Id="b98f56d6-7026-4b0e-8c2c-afe4c190a76c"
                 name="method"
                 profile="CSharpProfile">
                 <propertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="13cbbc72-0dbb-47ca-bba8-8e250acf3456">
+                    Id="8d10145d-8f24-4554-8e84-b3fa6b3d295e">
                     <propertyInstance
-                      Id="44d5770f-e0ce-4046-a04f-48456c5f0229"
+                      Id="6a599a9d-492e-48f7-8bbf-dae8869b4487"
                       name="ClrAttributes" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="87f3c25b-2b32-4ad3-80dd-3d3c3bd53f70">
+                    Id="d588548c-8e0f-4d04-8790-9ce92586f78b">
                     <propertyInstance
-                      Id="5847cdba-0346-47d7-be91-4c8ec6e4b115"
+                      Id="824cf88b-baa6-48b0-9e9e-35b421a6ae66"
                       name="IsPartial"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="5feb0080-9f72-4dfc-ad22-fcd35ab5a49d">
+                    Id="a9263365-44ee-4430-bd34-43b609f3949c">
                     <propertyInstance
-                      Id="aa46e963-0751-4daa-83f1-d771b270c5d1"
+                      Id="d2f11e9a-8d8f-43db-80c8-dcc9098c3352"
                       name="IsUnsafe"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="9200cfdc-69a4-4f3b-911a-bfc9e834e3eb">
+                    Id="02aea686-12b4-4995-b6c5-7ef6646c4420">
                     <propertyInstance
-                      Id="5ee7fa58-3440-4d9a-a35f-e23cf9cdbc84"
+                      Id="840830eb-ff01-4805-bf59-088090c4546c"
                       name="Inheritance"
                       value="none" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="4307faad-fec7-43bf-9281-84f1d4cc6791">
+                    Id="e3779010-bede-4016-8661-5557895045dc">
                     <propertyInstance
-                      Id="f70385b6-d515-4d4b-ab5b-05feca23be63"
+                      Id="e76aac67-2804-41ae-aa85-172ae98b7ff0"
                       name="PackageVisibility"
                       value="internal" />
                   </stereotypeInstanceHasPropertyInstances>
                   <stereotypeInstanceHasPropertyInstances
-                    Id="ffbce2ec-615f-40dd-8979-a525ab03da0a">
+                    Id="6937e9d1-0b72-4ca7-b043-b0cab21fa6b0">
                     <propertyInstance
-                      Id="e876821a-fe1b-4f91-b5c2-11fecac2e60d"
+                      Id="b396454d-72ba-4a1e-a824-c95132e4dbb0"
                       name="params"
                       value="false" />
                   </stereotypeInstanceHasPropertyInstances>

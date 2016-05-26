@@ -11,9 +11,9 @@ namespace FabricsFactoryMethodPattern.Services
 {
     using Entities;
 
-    public class EmloyeeService : PersonService<Employee>
+    public class EmployeeService : PersonService<Employee>
     {
-        public EmloyeeService()
+        public EmployeeService()
         {
         }
 
@@ -35,7 +35,11 @@ namespace FabricsFactoryMethodPattern.Services
             }
         }
 
-
+        public List<Employee> GetShipper()
+        {
+            var filter = Builders<Employee>.Filter.Where(p => p.DriverLincenseNumber != null);
+            return this.Collection.Find(filter).ToList();
+        }
 
     }
 }

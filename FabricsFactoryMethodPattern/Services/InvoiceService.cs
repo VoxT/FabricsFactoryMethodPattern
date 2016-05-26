@@ -155,6 +155,22 @@ namespace FabricsFactoryMethodPattern.Services
             }
 
         }
+
+        public List<Delivery> GetDelivery()
+        {
+            var listInvoice = this.GetAll();
+            List<Delivery> result = new List<Delivery>();
+
+            foreach (var invoice in listInvoice)
+            {
+                if (invoice.Delivery != null)
+                {
+                    result.Concat(invoice.Delivery);        
+                }
+            }
+
+            return result.OrderBy(p => p.Time).ToList();
+        }
     }
 
 }

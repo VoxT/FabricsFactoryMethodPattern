@@ -32,8 +32,8 @@ namespace FabricsFactoryMethodPattern.Entities
         [BsonElement("degree")]
         public string Degree { get; set; }
 
-        [BsonElement("shipper")]
-        public Shipper Shipper { get; set; }
+        [BsonElement("driver_lincense_number")]
+        public string DriverLincenseNumber { get; set; }
 
         [BsonElement("leave")]
         public List<Leave> Leave { get; set; }
