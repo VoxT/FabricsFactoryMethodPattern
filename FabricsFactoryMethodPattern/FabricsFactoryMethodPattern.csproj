@@ -79,7 +79,7 @@
     <Compile Include="Entities\Supplier.cs" />
     <Compile Include="Services\CustomerService.cs" />
     <Compile Include="Services\Database.cs" />
-    <Compile Include="Services\EmloyeeService.cs" />
+    <Compile Include="Services\EmployeeService.cs" />
     <Compile Include="Services\EnitityService.cs" />
     <Compile Include="Services\ExampleService.cs" />
     <Compile Include="Services\FabricsColorService.cs" />
